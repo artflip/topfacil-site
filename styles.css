@@ -111,7 +111,7 @@ body {
 }
 
 .logo-text {
-    font-size: 2.5rem; /* Ajustado para ter a mesma altura da logo-img (40px) */
+    font-size: 3rem; /* Aumentado para ter a mesma altura da logo-img (40px) */
     font-weight: 700;
     color: var(--primary);
     font-family: var(--font);
@@ -119,11 +119,12 @@ body {
     line-height: 1; /* Garante que a altura seja exata */
 }
 
-.logo span {
+/* Removendo regra conflitante */
+/* .logo span {
     font-size: 0.75rem;
     color: var(--secondary);
     font-weight: 500;
-}
+} */
 
 .nav-menu {
     display: none;
