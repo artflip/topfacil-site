@@ -111,12 +111,15 @@ body {
 }
 
 .logo-text {
-    font-size: 3rem; /* Aumentado para ter a mesma altura da logo-img (40px) */
+    font-size: clamp(1.5rem, 4vw, 2.2rem); /* Responsivo: mínimo 1.5rem, máximo 2.2rem */
     font-weight: 700;
     color: var(--primary);
     font-family: var(--font);
     letter-spacing: -0.5px;
     line-height: 1; /* Garante que a altura seja exata */
+    display: flex;
+    align-items: center;
+    height: 40px; /* Mesma altura da logo */
 }
 
 /* Removendo regra conflitante */
@@ -961,6 +964,10 @@ body {
         display: none;
     }
     
+    .logo-text {
+        font-size: 2rem; /* Tamanho fixo para tablet */
+    }
+    
     .slide-title {
         font-size: 3.5rem;
     }
@@ -1033,6 +1040,10 @@ body {
 @media (min-width: 1024px) {
     .container {
         padding: 0 var(--space-6);
+    }
+    
+    .logo-text {
+        font-size: 2.2rem; /* Tamanho fixo para desktop */
     }
     
     .slide-title {
