@@ -26,6 +26,7 @@
     --font-size-3xl: 1.875rem;
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
     
     /* Espaçamentos */
     --spacing-xs: 0.5rem;
@@ -34,15 +35,18 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
     
     /* Bordas */
     --border-radius: 0.5rem;
     --border-radius-lg: 1rem;
+    --border-radius-xl: 1.5rem;
     
     /* Sombras */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
     
     /* Transições */
     --transition: all 0.3s ease;
@@ -985,6 +989,130 @@ body {
     
     .accommodations-info {
         grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Melhorias para desktop */
+    .slide-title {
+        font-size: var(--font-size-6xl);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .slide-subtitle {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .section-header h2 {
+        font-size: var(--font-size-4xl);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .section-header p {
+        font-size: var(--font-size-xl);
+    }
+    
+    .highlight-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .highlight-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .highlight-icon i {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .highlight-card h3 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .info-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .info-card h3 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .about-text h3 {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .about-text p {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .machines-text h3 {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .machines-text p {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .contact-form {
+        padding: var(--spacing-2xl);
+    }
+    
+    .contact-item {
+        padding: var(--spacing-xl);
+    }
+    
+    .contact-item h4 {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .contact-item p {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Mais espaçamento entre seções */
+    .highlights,
+    .about,
+    .accommodations,
+    .machines,
+    .contact {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    /* Slider controls maiores */
+    .slider-btn {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-xl);
+    }
+    
+    .indicator {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .slide-content {
+        max-width: 1000px;
+    }
+    
+    .slide-title {
+        font-size: 4rem;
+    }
+    
+    .section-header h2 {
+        font-size: 3.5rem;
     }
 }
 
