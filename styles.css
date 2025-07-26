@@ -6,11 +6,12 @@
 }
 
 :root {
-    /* Cores */
-    --primary: #059669; /* Verde para economia */
-    --primary-dark: #047857;
+    /* Cores da Logo TopFácil */
+    --primary: #1A363D; /* Azul petróleo escuro da logo */
+    --primary-dark: #0F1F24; /* Versão mais escura */
     --secondary: #64748b;
-    --accent: #10b981;
+    --accent: #7A7B3F; /* Verde oliva/cáqui da logo */
+    --accent-light: #8A8B4F; /* Versão mais clara */
     --white: #ffffff;
     --gray-50: #f8fafc;
     --gray-100: #f1f5f9;
@@ -90,6 +91,21 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: var(--space-4) 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .logo h1 {
@@ -627,15 +643,15 @@ body {
     border: 2px solid var(--gray-300);
 }
 
-.result-card.savings {
-    background: var(--primary);
-    color: var(--white);
-}
-
-.result-card.total {
-    background: var(--accent);
-    color: var(--white);
-}
+    .result-card.savings {
+        background: var(--accent);
+        color: var(--white);
+    }
+    
+    .result-card.total {
+        background: var(--primary);
+        color: var(--white);
+    }
 
 .result-card h4 {
     font-size: 0.875rem;
@@ -774,8 +790,17 @@ body {
     margin-bottom: var(--space-12);
 }
 
-.footer-logo h3 {
-    margin-bottom: var(--space-2);
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Torna a logo branca no footer */
 }
 
 .footer-links h4,
@@ -810,7 +835,7 @@ body {
     right: var(--space-6);
     width: 56px;
     height: 56px;
-    background: #25d366;
+    background: var(--accent);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -825,7 +850,7 @@ body {
 
 .whatsapp-btn:hover {
     transform: scale(1.1);
-    background: #128c7e;
+    background: var(--accent-light);
 }
 
 /* Estados de loading e sucesso */
