@@ -175,34 +175,72 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Simular envio
+        // Pegar dados do formulário
+        const formData = new FormData(this);
         const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         
+        // Mostrar loading
         submitBtn.textContent = 'Enviando...';
         submitBtn.disabled = true;
         
-        // Simular delay de envio
-        setTimeout(() => {
-            // Limpar formulário
-            this.reset();
+        // Remover mensagens anteriores
+        const existingMessages = this.querySelectorAll('.success-message, .error-message');
+        existingMessages.forEach(msg => msg.remove());
+        
+        // Enviar para Formspree
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Sucesso
+                this.reset();
+                
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.innerHTML = `
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Mensagem enviada com sucesso!</strong><br>
+                    Vamos calcular sua economia e entrar em contato em breve.
+                `;
+                
+                this.appendChild(successMessage);
+                
+                // Scroll para a mensagem
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+            } else {
+                throw new Error('Erro no envio');
+            }
+        })
+        .catch(error => {
+            // Erro
+            const errorMessage = document.createElement('div');
+            errorMessage.className = 'error-message';
+            errorMessage.innerHTML = `
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Erro ao enviar mensagem.</strong><br>
+                Tente novamente ou entre em contato pelo WhatsApp.
+            `;
             
-            // Mostrar mensagem de sucesso
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.textContent = 'Mensagem enviada com sucesso! Vamos calcular sua economia e entrar em contato em breve.';
-            
-            this.appendChild(successMessage);
-            
+            this.appendChild(errorMessage);
+        })
+        .finally(() => {
             // Restaurar botão
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
             
-            // Remover mensagem após 5 segundos
+            // Remover mensagens após 8 segundos
             setTimeout(() => {
-                successMessage.remove();
-            }, 5000);
-        }, 2000);
+                const messages = this.querySelectorAll('.success-message, .error-message');
+                messages.forEach(msg => msg.remove());
+            }, 8000);
+        });
     });
 }
 

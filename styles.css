@@ -837,19 +837,60 @@ body {
 .success-message {
     background: var(--primary);
     color: var(--white);
-    padding: var(--space-4);
-    border-radius: var(--radius);
-    margin-top: var(--space-4);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-6);
     text-align: center;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent);
+    animation: slideIn 0.3s ease;
+}
+
+.success-message i {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-2);
+    display: block;
+}
+
+.success-message strong {
+    font-size: 1.125rem;
+    display: block;
+    margin-bottom: var(--space-2);
 }
 
 .error-message {
     background: var(--red);
     color: var(--white);
-    padding: var(--space-4);
-    border-radius: var(--radius);
-    margin-top: var(--space-4);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-6);
     text-align: center;
+    box-shadow: var(--shadow);
+    border-left: 4px solid #dc2626;
+    animation: slideIn 0.3s ease;
+}
+
+.error-message i {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-2);
+    display: block;
+}
+
+.error-message strong {
+    font-size: 1.125rem;
+    display: block;
+    margin-bottom: var(--space-2);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsividade */
