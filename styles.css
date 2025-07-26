@@ -1040,9 +1040,10 @@ body {
         flex-direction: column;
     }
     
+    /* Calculadora - Layout vertical sempre */
     .calculator-results {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-4);
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
     }
     
     .result-value {
@@ -1104,10 +1105,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-    .calculator-results {
-        gap: var(--space-8);
-    }
-    
     .result-value {
         font-size: 2.5rem;
     }
