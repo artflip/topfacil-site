@@ -704,15 +704,15 @@ body {
 }
 
 .result-value {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-weight: 700;
     margin-bottom: var(--space-1);
     line-height: 1.1;
     word-break: break-word;
     overflow-wrap: break-word;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
 }
 
 .result-card p {
@@ -1052,7 +1052,7 @@ body {
     }
     
     .result-value {
-        font-size: 1.5rem;
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
     }
     
     .result-card h4 {
@@ -1100,7 +1100,7 @@ body {
     }
     
     .result-value {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 3.5vw, 2.25rem);
     }
     
     .result-card h4 {
@@ -1118,7 +1118,7 @@ body {
     }
     
     .result-value {
-        font-size: 2.5rem;
+        font-size: clamp(1.75rem, 4vw, 2.75rem);
     }
 }
 
