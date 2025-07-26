@@ -1038,15 +1038,17 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    /* Calculadora - Mantém layout vertical */
+    /* Calculadora - Layout horizontal no tablet */
     .calculator-content {
         flex-direction: column;
     }
     
-    /* Calculadora - Layout vertical sempre */
     .calculator-results {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-4);
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .result-value {
@@ -1088,9 +1090,13 @@ body {
         font-size: 2.5rem;
     }
     
-    /* Calculadora - Largura máxima para desktop */
+    /* Calculadora - Layout horizontal no desktop */
     .calculator-results {
-        max-width: 500px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-6);
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .result-value {
@@ -1108,7 +1114,7 @@ body {
 
 @media (min-width: 1200px) {
     .calculator-results {
-        max-width: 600px;
+        gap: var(--space-8);
     }
     
     .result-value {
