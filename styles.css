@@ -59,15 +59,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     font-family: var(--font);
     line-height: 1.6;
     color: var(--gray-800);
-    background-color: var(--white);
-    overflow-x: hidden; /* Evita scroll horizontal */
-    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Container */
@@ -734,8 +733,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-12);
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .contact-info {
@@ -796,9 +793,6 @@ body {
     padding: var(--space-8);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow);
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 100%;
 }
 
 .form-row {
@@ -806,8 +800,6 @@ body {
     grid-template-columns: 1fr;
     gap: var(--space-4);
     margin-bottom: var(--space-4);
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .form-group {
@@ -821,12 +813,10 @@ body {
     border: 2px solid var(--gray-200);
     border-radius: var(--radius);
     font-family: var(--font);
-    font-size: clamp(0.875rem, 2vw, 1rem); /* Fonte responsiva */
+    font-size: 1rem;
     transition: var(--transition);
     min-width: 0; /* Evita overflow */
     min-height: 48px; /* Altura mínima para melhor usabilidade */
-    box-sizing: border-box;
-    max-width: 100%;
 }
 
 .form-group input:focus,
@@ -854,6 +844,8 @@ body {
     grid-template-columns: 1fr;
     gap: var(--space-12);
     margin-bottom: var(--space-12);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-logo {
@@ -883,6 +875,9 @@ body {
     margin-bottom: var(--space-2);
     transition: var(--transition);
     font-size: 1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .footer-links a:hover {
@@ -893,6 +888,9 @@ body {
     color: var(--gray-300);
     margin-bottom: var(--space-2);
     font-size: 1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .footer-bottom {
@@ -1041,21 +1039,15 @@ body {
     
     .contact-content {
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-8);
     }
     
     .form-row {
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-4);
-    }
-    
-    .form-group input,
-    .form-group textarea {
-        font-size: clamp(0.875rem, 1.2vw, 1.125rem);
     }
     
     .footer-content {
         grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-8);
     }
     
     /* Calculadora - Layout horizontal no tablet */
@@ -1130,10 +1122,6 @@ body {
     .result-card p {
         font-size: 1rem;
     }
-    
-    .contact-content {
-        gap: var(--space-12);
-    }
 }
 
 @media (min-width: 1200px) {
@@ -1143,6 +1131,14 @@ body {
     
     .result-value {
         font-size: clamp(1.75rem, 4vw, 2.75rem);
+    }
+    
+    .footer-content {
+        gap: var(--space-12);
+    }
+    
+    .footer-contact p {
+        font-size: 0.9rem;
     }
 }
 
