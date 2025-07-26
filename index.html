@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TopFácil Alojamentos - Alojamentos Profissionais em Luís Eduardo Magalhães</title>
-    <meta name="description" content="Alojamentos prontos para receber seu time com conforto, segurança e estrutura profissional em Luís Eduardo Magalhães - BA">
-    <meta name="keywords" content="alojamento, trabalhadores, Luís Eduardo Magalhães, construção civil, empresas, locação máquinas">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <meta name="description" content="Alojamentos profissionais para empresas em Luís Eduardo Magalhães - BA. Estrutura completa para 56 trabalhadores com energia solar e poço artesiano.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -24,8 +20,8 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
+        <div class="container">
+            <nav class="nav">
                 <div class="logo">
                     <h1>TopFácil</h1>
                     <span>Alojamentos</span>
@@ -33,87 +29,49 @@
                 
                 <div class="nav-menu" id="nav-menu">
                     <a href="#home" class="nav-link">Home</a>
-                    <a href="#quem-somos" class="nav-link">Quem Somos</a>
-                    <a href="#alojamentos" class="nav-link">Alojamentos</a>
-                    <a href="#maquinas" class="nav-link">Máquinas</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#estrutura" class="nav-link">Estrutura</a>
                     <a href="#contato" class="nav-link">Contato</a>
                 </div>
                 
                 <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Slider -->
-    <section id="home" class="hero-slider">
-        <div class="slider-container">
-            <!-- Slide 1 -->
-            <div class="slide active" style="background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content">
-                    <h1 class="slide-title">
-                        Alojamentos prontos para receber seu time com <span class="highlight">conforto, segurança</span> e estrutura profissional
-                    </h1>
-                    <p class="slide-subtitle">
-                        Estrutura completa para 56 trabalhadores em Luís Eduardo Magalhães - BA
-                    </p>
-                    <div class="slide-buttons">
-                        <a href="#alojamentos" class="btn btn-primary">Conheça nosso projeto</a>
-                        <a href="#contato" class="btn btn-secondary">Fale conosco</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Alojamentos profissionais para sua empresa
+                </h1>
+                <p class="hero-subtitle">
+                    Estrutura completa para 56 trabalhadores em Luís Eduardo Magalhães - BA
+                </p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-solar-panel"></i>
+                        <span>Energia Solar</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tint"></i>
+                        <span>Poço Artesiano</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Segurança 24h</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80')">
-                <div class="slide-content">
-                    <h1 class="slide-title">
-                        Infraestrutura completa com <span class="highlight">energia solar</span> e poço artesiano
-                    </h1>
-                    <p class="slide-subtitle">
-                        Sustentabilidade e economia para sua empresa
-                    </p>
-                    <div class="slide-buttons">
-                        <a href="#alojamentos" class="btn btn-primary">Ver infraestrutura</a>
-                        <a href="#contato" class="btn btn-secondary">Solicitar orçamento</a>
-                    </div>
+                <div class="hero-buttons">
+                    <a href="#estrutura" class="btn btn-primary">Ver estrutura</a>
+                    <a href="#contato" class="btn btn-secondary">Falar conosco</a>
                 </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="slide" style="background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.8)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
-                <div class="slide-content">
-                    <h1 class="slide-title">
-                        Localização estratégica em <span class="highlight">Luís Eduardo Magalhães</span>
-                    </h1>
-                    <p class="slide-subtitle">
-                        Acesso fácil para empresas de construção civil, agronegócio e indústrias
-                    </p>
-                    <div class="slide-buttons">
-                        <a href="#contato" class="btn btn-primary">Agendar visita</a>
-                        <a href="#quem-somos" class="btn btn-secondary">Conhecer empresa</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider Controls -->
-            <div class="slider-controls">
-                <button class="slider-btn prev" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="slider-btn next" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-
-            <!-- Slider Indicators -->
-            <div class="slider-indicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
             </div>
         </div>
     </section>
@@ -127,55 +85,69 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>56 Trabalhadores</h3>
-                    <p>Capacidade inicial com expansão planejada</p>
+                    <p>Capacidade para sua equipe</p>
                 </div>
                 <div class="highlight-card">
                     <div class="highlight-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Localização Estratégica</h3>
-                    <p>Luís Eduardo Magalhães - BA</p>
+                    <h3>Luís Eduardo Magalhães</h3>
+                    <p>Localização estratégica</p>
                 </div>
                 <div class="highlight-card">
                     <div class="highlight-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-building"></i>
                     </div>
-                    <h3>Segurança Total</h3>
-                    <p>Estrutura profissional e organizada</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="fas fa-solar-panel"></i>
-                    </div>
-                    <h3>Energia Solar</h3>
-                    <p>Sustentabilidade e economia</p>
+                    <h3>Estrutura Completa</h3>
+                    <p>Cantina, lavanderia e mais</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quem Somos -->
-    <section id="quem-somos" class="about">
+    <!-- Sobre -->
+    <section id="sobre" class="about">
         <div class="container">
             <div class="section-header">
-                <h2>Quem Somos</h2>
+                <h2>Sobre a TopFácil</h2>
                 <p>Conheça nossa empresa</p>
             </div>
             
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Nossa Missão</h3>
-                    <p>Oferecer alojamentos de qualidade para trabalhadores, proporcionando conforto, segurança e bem-estar em Luís Eduardo Magalhães.</p>
+                    <p class="about-lead">
+                        Especialistas em alojamentos profissionais para empresas de construção civil, agronegócio e indústrias.
+                    </p>
                     
-                    <h3>Nossa Experiência</h3>
-                    <p>Fundada por Valdir dos Reis de Paiva, profissional com décadas de experiência no setor bancário e construção civil.</p>
-                    
-                    <h3>Nossa Visão</h3>
-                    <p>Ser referência em alojamentos profissionais na região, expandindo nossa capacidade para atender mais empresas.</p>
+                    <div class="about-points">
+                        <div class="point">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Experiência</h4>
+                                <p>Fundada por Valdir dos Reis de Paiva, profissional com décadas de experiência no setor.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="point">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Qualidade</h4>
+                                <p>Estrutura moderna com energia solar, poço artesiano e segurança 24 horas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="point">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Confiabilidade</h4>
+                                <p>Atendimento a empresas de todo o Brasil com compromisso de qualidade.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="about-image">
-                    <div class="about-placeholder">
+                    <div class="image-placeholder">
                         <i class="fas fa-building"></i>
                         <p>Nossa estrutura</p>
                     </div>
@@ -184,91 +156,55 @@
         </div>
     </section>
 
-    <!-- Alojamentos -->
-    <section id="alojamentos" class="accommodations">
+    <!-- Estrutura -->
+    <section id="estrutura" class="structure">
         <div class="container">
             <div class="section-header">
-                <h2>Nossos Alojamentos</h2>
-                <p>Estrutura completa para seu time</p>
+                <h2>Nossa Estrutura</h2>
+                <p>Tudo que sua empresa precisa</p>
             </div>
             
-            <div class="accommodations-content">
-                <div class="accommodations-info">
-                    <div class="info-card">
-                        <h3><i class="fas fa-bed"></i> Estrutura dos Quartos</h3>
-                        <ul>
-                            <li>2 blocos com 6 quartos cada</li>
-                            <li>1 quarto para 8 trabalhadores</li>
-                            <li>5 quartos para 4 trabalhadores</li>
-                            <li>Total: 56 trabalhadores</li>
-                        </ul>
+            <div class="structure-grid">
+                <div class="structure-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bed"></i>
                     </div>
-                    
-                    <div class="info-card">
-                        <h3><i class="fas fa-utensils"></i> Infraestrutura</h3>
-                        <ul>
-                            <li>Cantina equipada</li>
-                            <li>Lavanderia</li>
-                            <li>Poço artesiano legalizado</li>
-                            <li>Sistema de energia solar</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-card">
-                        <h3><i class="fas fa-star"></i> Diferenciais</h3>
-                        <ul>
-                            <li>Camas confortáveis</li>
-                            <li>Armários individuais</li>
-                            <li>Limpeza diária</li>
-                            <li>Segurança 24h</li>
-                        </ul>
-                    </div>
+                    <h3>Quartos</h3>
+                    <ul>
+                        <li>2 blocos com 6 quartos cada</li>
+                        <li>1 quarto para 8 pessoas</li>
+                        <li>5 quartos para 4 pessoas</li>
+                        <li>Camas confortáveis</li>
+                        <li>Armários individuais</li>
+                    </ul>
                 </div>
                 
-                <div class="accommodations-gallery">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-images"></i>
-                        <p>Galeria de fotos dos alojamentos</p>
+                <div class="structure-card">
+                    <div class="card-icon">
+                        <i class="fas fa-utensils"></i>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Locação de Máquinas -->
-    <section id="maquinas" class="machines">
-        <div class="container">
-            <div class="section-header">
-                <h2>Locação de Máquinas</h2>
-                <p>Equipamentos para construção civil</p>
-            </div>
-            
-            <div class="machines-content">
-                <div class="machines-text">
-                    <h3>Nossos Equipamentos</h3>
-                    <p>Além dos alojamentos, oferecemos locação de máquinas e equipamentos para construção civil, atendendo todas as necessidades das empresas.</p>
-                    
-                    <div class="machines-features">
-                        <div class="feature">
-                            <i class="fas fa-tools"></i>
-                            <span>Equipamentos modernos</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-clock"></i>
-                            <span>Disponibilidade 24h</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-handshake"></i>
-                            <span>Contratos flexíveis</span>
-                        </div>
-                    </div>
+                    <h3>Alimentação</h3>
+                    <ul>
+                        <li>Cantina equipada</li>
+                        <li>Refeitório amplo</li>
+                        <li>Cozinha profissional</li>
+                        <li>Cardápio variado</li>
+                        <li>Higiene garantida</li>
+                    </ul>
                 </div>
                 
-                <div class="machines-image">
-                    <div class="machines-placeholder">
-                        <i class="fas fa-truck"></i>
-                        <p>Foto dos equipamentos</p>
+                <div class="structure-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tools"></i>
                     </div>
+                    <h3>Infraestrutura</h3>
+                    <ul>
+                        <li>Energia solar</li>
+                        <li>Poço artesiano</li>
+                        <li>Lavanderia</li>
+                        <li>Wi-Fi gratuito</li>
+                        <li>Segurança 24h</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -278,8 +214,8 @@
     <section id="contato" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Fale Conosco</h2>
-                <p>Entre em contato e conheça nossa estrutura</p>
+                <h2>Entre em Contato</h2>
+                <p>Vamos conversar sobre sua necessidade</p>
             </div>
             
             <div class="contact-content">
@@ -303,27 +239,36 @@
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Endereço</h4>
+                            <h4>Localização</h4>
                             <p>Luís Eduardo Magalhães - BA</p>
-                            <a href="#" class="map-link">Ver no Google Maps</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="contact-form">
                     <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Nome da empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="contact" name="contact" placeholder="Nome do contato" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Telefone" required>
+                            </div>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Seu telefone">
+                            <textarea id="message" name="message" placeholder="Conte-nos sobre sua necessidade (quantidade de trabalhadores, período, etc.)" rows="4" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-                        </div>
+                        
                         <button type="submit" class="btn btn-primary">Enviar mensagem</button>
                     </form>
                 </div>
@@ -337,14 +282,14 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h3>TopFácil Alojamentos</h3>
-                    <p>Estrutura profissional para seu time</p>
+                    <p>Estrutura profissional para sua empresa</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Links Rápidos</h4>
+                    <h4>Links</h4>
                     <a href="#home">Home</a>
-                    <a href="#quem-somos">Quem Somos</a>
-                    <a href="#alojamentos">Alojamentos</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#estrutura">Estrutura</a>
                     <a href="#contato">Contato</a>
                 </div>
                 
