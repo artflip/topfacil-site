@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const navLinks = document.querySelectorAll('.nav-link');
     
+    // Slider elements
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    // Slider variables
+    let currentSlide = 0;
+    let slideInterval;
+    
     // Menu mobile toggle
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
@@ -60,6 +70,74 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Slider functionality
+    function showSlide(index) {
+        // Remove active class from all slides and indicators
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Add active class to current slide and indicator
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        
+        currentSlide = index;
+    }
+    
+    function nextSlide() {
+        const next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+    }
+    
+    function prevSlide() {
+        const prev = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prev);
+    }
+    
+    // Auto-play slider
+    function startSlider() {
+        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
+    
+    function stopSlider() {
+        clearInterval(slideInterval);
+    }
+    
+    // Event listeners for slider controls
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            stopSlider();
+            prevSlide();
+            startSlider();
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            stopSlider();
+            nextSlide();
+            startSlider();
+        });
+    }
+    
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            stopSlider();
+            showSlide(index);
+            startSlider();
+        });
+    });
+    
+    // Pause slider on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopSlider);
+        sliderContainer.addEventListener('mouseleave', startSlider);
+    }
+    
+    // Start the slider
+    startSlider();
     
     // Header com scroll effect
     let lastScrollTop = 0;
@@ -155,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return emailRegex.test(email);
     }
     
-    // Animação de scroll para elementos
+    // Animação de scroll para elementos com Intersection Observer
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -166,12 +244,23 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                
+                // Adiciona classe para animações específicas
+                if (entry.target.classList.contains('highlight-card')) {
+                    entry.target.style.animationDelay = '0.1s';
+                }
+                if (entry.target.classList.contains('info-card')) {
+                    entry.target.style.animationDelay = '0.2s';
+                }
+                if (entry.target.classList.contains('contact-item')) {
+                    entry.target.style.animationDelay = '0.3s';
+                }
             }
         });
     }, observerOptions);
     
     // Observa elementos para animação
-    const animatedElements = document.querySelectorAll('.highlight-card, .info-card, .timeline-item, .contact-item');
+    const animatedElements = document.querySelectorAll('.highlight-card, .info-card, .contact-item, .feature');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';

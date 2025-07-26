@@ -13,7 +13,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -36,7 +36,6 @@
                     <a href="#quem-somos" class="nav-link">Quem Somos</a>
                     <a href="#alojamentos" class="nav-link">Alojamentos</a>
                     <a href="#maquinas" class="nav-link">Máquinas</a>
-                    <a href="#expansao" class="nav-link">Expansão</a>
                     <a href="#contato" class="nav-link">Contato</a>
                 </div>
                 
@@ -49,26 +48,72 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Alojamentos prontos para receber seu time com <span class="highlight">conforto, segurança</span> e estrutura profissional
-                </h1>
-                <p class="hero-subtitle">
-                    Estrutura completa para 56 trabalhadores em Luís Eduardo Magalhães - BA
-                </p>
-                <div class="hero-buttons">
-                    <a href="#alojamentos" class="btn btn-primary">Conheça nosso projeto</a>
-                    <a href="#contato" class="btn btn-secondary">Fale conosco</a>
+    <!-- Hero Slider -->
+    <section id="home" class="hero-slider">
+        <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
+                <div class="slide-content">
+                    <h1 class="slide-title">
+                        Alojamentos prontos para receber seu time com <span class="highlight">conforto, segurança</span> e estrutura profissional
+                    </h1>
+                    <p class="slide-subtitle">
+                        Estrutura completa para 56 trabalhadores em Luís Eduardo Magalhães - BA
+                    </p>
+                    <div class="slide-buttons">
+                        <a href="#alojamentos" class="btn btn-primary">Conheça nosso projeto</a>
+                        <a href="#contato" class="btn btn-secondary">Fale conosco</a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <i class="fas fa-building"></i>
-                    <p>Imagem do alojamento</p>
+
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.8)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80')">
+                <div class="slide-content">
+                    <h1 class="slide-title">
+                        Infraestrutura completa com <span class="highlight">energia solar</span> e poço artesiano
+                    </h1>
+                    <p class="slide-subtitle">
+                        Sustentabilidade e economia para sua empresa
+                    </p>
+                    <div class="slide-buttons">
+                        <a href="#alojamentos" class="btn btn-primary">Ver infraestrutura</a>
+                        <a href="#contato" class="btn btn-secondary">Solicitar orçamento</a>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.8)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')">
+                <div class="slide-content">
+                    <h1 class="slide-title">
+                        Localização estratégica em <span class="highlight">Luís Eduardo Magalhães</span>
+                    </h1>
+                    <p class="slide-subtitle">
+                        Acesso fácil para empresas de construção civil, agronegócio e indústrias
+                    </p>
+                    <div class="slide-buttons">
+                        <a href="#contato" class="btn btn-primary">Agendar visita</a>
+                        <a href="#quem-somos" class="btn btn-secondary">Conhecer empresa</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="slider-btn prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Slider Indicators -->
+            <div class="slider-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
             </div>
         </div>
     </section>
@@ -114,27 +159,25 @@
         <div class="container">
             <div class="section-header">
                 <h2>Quem Somos</h2>
-                <p>Conheça nossa história e propósito</p>
+                <p>Conheça nossa empresa</p>
             </div>
             
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Nossa História</h3>
-                    <p>A TopFácil Alojamentos nasceu da visão empreendedora de <strong>Valdir dos Reis de Paiva</strong>, profissional com décadas de experiência no setor bancário, construção civil e relacionamento com empresas.</p>
+                    <h3>Nossa Missão</h3>
+                    <p>Oferecer alojamentos de qualidade para trabalhadores, proporcionando conforto, segurança e bem-estar em Luís Eduardo Magalhães.</p>
                     
-                    <p>Percebemos uma demanda real e crescente por alojamentos organizados, seguros e com estrutura profissional em cidades com escassez de moradia para trabalhadores.</p>
+                    <h3>Nossa Experiência</h3>
+                    <p>Fundada por Valdir dos Reis de Paiva, profissional com décadas de experiência no setor bancário e construção civil.</p>
                     
-                    <h3>Nosso Propósito</h3>
-                    <p>Oferecer dignidade e conforto aos trabalhadores, proporcionando uma estrutura que valoriza o bem-estar e a produtividade das equipes.</p>
-                    
-                    <h3>Visão de Futuro</h3>
-                    <p>Expandir progressivamente para 4x nossa capacidade inicial nos próximos anos, sempre mantendo o padrão de qualidade e profissionalismo.</p>
+                    <h3>Nossa Visão</h3>
+                    <p>Ser referência em alojamentos profissionais na região, expandindo nossa capacidade para atender mais empresas.</p>
                 </div>
                 
                 <div class="about-image">
                     <div class="about-placeholder">
-                        <i class="fas fa-user-tie"></i>
-                        <p>Foto do fundador</p>
+                        <i class="fas fa-building"></i>
+                        <p>Nossa estrutura</p>
                     </div>
                 </div>
             </div>
@@ -203,7 +246,7 @@
             <div class="machines-content">
                 <div class="machines-text">
                     <h3>Nossos Equipamentos</h3>
-                    <p>Além dos alojamentos, oferecemos locação de máquinas e equipamentos para construção civil, como estratégia de diversificação e atendimento completo às necessidades das empresas.</p>
+                    <p>Além dos alojamentos, oferecemos locação de máquinas e equipamentos para construção civil, atendendo todas as necessidades das empresas.</p>
                     
                     <div class="machines-features">
                         <div class="feature">
@@ -225,47 +268,6 @@
                     <div class="machines-placeholder">
                         <i class="fas fa-truck"></i>
                         <p>Foto dos equipamentos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expansão -->
-    <section id="expansao" class="expansion">
-        <div class="container">
-            <div class="section-header">
-                <h2>Expansão e Futuro</h2>
-                <p>Nossos planos de crescimento</p>
-            </div>
-            
-            <div class="expansion-content">
-                <div class="expansion-text">
-                    <h3>Planejamento de Crescimento</h3>
-                    <p>Nosso projeto contempla expansão progressiva para 4x a capacidade inicial nos próximos anos, com unidades independentes e sempre mantendo o padrão de qualidade.</p>
-                    
-                    <div class="expansion-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-year">2024</div>
-                            <div class="timeline-content">
-                                <h4>Unidade Inicial</h4>
-                                <p>56 trabalhadores em Luís Eduardo Magalhães</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2025-2026</div>
-                            <div class="timeline-content">
-                                <h4>Primeira Expansão</h4>
-                                <p>Dobrar a capacidade para 112 trabalhadores</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2027-2028</div>
-                            <div class="timeline-content">
-                                <h4>Expansão Completa</h4>
-                                <p>Alcançar 224 trabalhadores em múltiplas unidades</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
