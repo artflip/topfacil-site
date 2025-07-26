@@ -3,6 +3,24 @@ const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 const contactForm = document.getElementById('contactForm');
 
+// Slider elements
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const indicators = document.querySelectorAll('.indicator');
+
+// Calculator elements
+const workersInput = document.getElementById('workers');
+const rentInput = document.getElementById('rent');
+const calculateBtn = document.getElementById('calculateBtn');
+const currentCostEl = document.getElementById('currentCost');
+const savingsEl = document.getElementById('savings');
+const yearlySavingsEl = document.getElementById('yearlySavings');
+
+// Slider variables
+let currentSlide = 0;
+let slideInterval;
+
 // Menu mobile
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
@@ -29,6 +47,129 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Slider functionality
+function showSlide(index) {
+    // Remove active class from all slides and indicators
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Add active class to current slide and indicator
+    slides[index].classList.add('active');
+    indicators[index].classList.add('active');
+    
+    currentSlide = index;
+}
+
+function nextSlide() {
+    const next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+}
+
+function prevSlide() {
+    const prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+}
+
+// Auto-play slider
+function startSlider() {
+    slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+function stopSlider() {
+    clearInterval(slideInterval);
+}
+
+// Event listeners for slider controls
+if (prevBtn) {
+    prevBtn.addEventListener('click', function() {
+        stopSlider();
+        prevSlide();
+        startSlider();
+    });
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', function() {
+        stopSlider();
+        nextSlide();
+        startSlider();
+    });
+}
+
+// Event listeners for indicators
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', function() {
+        stopSlider();
+        showSlide(index);
+        startSlider();
+    });
+});
+
+// Pause slider on hover
+const sliderContainer = document.querySelector('.slider-container');
+if (sliderContainer) {
+    sliderContainer.addEventListener('mouseenter', stopSlider);
+    sliderContainer.addEventListener('mouseleave', startSlider);
+}
+
+// Start the slider
+startSlider();
+
+// Calculadora de Economia
+function calculateSavings() {
+    const workers = parseInt(workersInput.value) || 0;
+    const rent = parseInt(rentInput.value) || 0;
+    
+    if (workers === 0 || rent === 0) return;
+    
+    // Custo atual (múltiplos alugueis + custos extras)
+    const currentCost = workers * rent * 1.3; // 30% a mais para custos extras
+    
+    // Custo com TopFácil (estimativa baseada em economia real)
+    const topfacilCost = workers * 600; // R$ 600 por trabalhador
+    
+    // Economia
+    const savings = currentCost - topfacilCost;
+    const yearlySavings = savings * 12;
+    
+    // Atualizar resultados com animação
+    animateValue(currentCostEl, currentCost);
+    animateValue(savingsEl, savings);
+    animateValue(yearlySavingsEl, yearlySavings);
+}
+
+function animateValue(element, target) {
+    const start = 0;
+    const duration = 1000;
+    const increment = target / (duration / 16);
+    let current = start;
+    
+    function updateValue() {
+        current += increment;
+        if (current < target) {
+            element.textContent = `R$ ${Math.floor(current).toLocaleString('pt-BR')}`;
+            requestAnimationFrame(updateValue);
+        } else {
+            element.textContent = `R$ ${target.toLocaleString('pt-BR')}`;
+        }
+    }
+    
+    updateValue();
+}
+
+// Event listeners para calculadora
+if (calculateBtn) {
+    calculateBtn.addEventListener('click', calculateSavings);
+}
+
+if (workersInput && rentInput) {
+    workersInput.addEventListener('input', calculateSavings);
+    rentInput.addEventListener('input', calculateSavings);
+}
+
+// Calcular economia inicial
+setTimeout(calculateSavings, 1000);
+
 // Formulário de contato
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -49,7 +190,7 @@ if (contactForm) {
             // Mostrar mensagem de sucesso
             const successMessage = document.createElement('div');
             successMessage.className = 'success-message';
-            successMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+            successMessage.textContent = 'Mensagem enviada com sucesso! Vamos calcular sua economia e entrar em contato em breve.';
             
             this.appendChild(successMessage);
             
@@ -104,7 +245,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observar elementos para animação
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.highlight-card, .structure-card, .contact-item, .point');
+    const animatedElements = document.querySelectorAll('.problem-card, .solution-point, .contact-item, .result-card');
     
     animatedElements.forEach(el => {
         el.style.opacity = '0';
@@ -131,7 +272,7 @@ const whatsappBtn = document.querySelector('.whatsapp-btn');
 if (whatsappBtn) {
     whatsappBtn.addEventListener('mouseenter', () => {
         const tooltip = document.createElement('div');
-        tooltip.textContent = 'Fale conosco no WhatsApp';
+        tooltip.textContent = 'Calcular economia no WhatsApp';
         tooltip.style.cssText = `
             position: absolute;
             bottom: 100%;
