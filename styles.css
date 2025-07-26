@@ -655,13 +655,14 @@ body {
 .input-group input:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgb(5 150 105 / 0.1);
+    box-shadow: 0 0 0 3px rgb(26 54 61 / 0.1);
 }
 
 .calculator-results {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4);
+    margin-top: var(--space-6);
 }
 
 .result-card {
@@ -669,10 +670,12 @@ body {
     padding: var(--space-6);
     border-radius: var(--radius-lg);
     transition: var(--transition);
-    min-height: 100px;
+    min-height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .result-card.current {
@@ -680,20 +683,21 @@ body {
     border: 2px solid var(--gray-300);
 }
 
-    .result-card.savings {
-        background: var(--accent);
-        color: var(--white);
-    }
-    
-    .result-card.total {
-        background: var(--primary);
-        color: var(--white);
-    }
+.result-card.savings {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.result-card.total {
+    background: var(--primary);
+    color: var(--white);
+}
 
 .result-card h4 {
     font-size: 0.875rem;
     font-weight: 600;
     margin-bottom: var(--space-2);
+    line-height: 1.2;
 }
 
 .result-value {
@@ -701,11 +705,14 @@ body {
     font-weight: 700;
     margin-bottom: var(--space-1);
     line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .result-card p {
     font-size: 0.75rem;
     opacity: 0.8;
+    line-height: 1.2;
 }
 
 /* Contato */
@@ -956,7 +963,7 @@ body {
 }
 
 /* Responsividade */
-@media (min-width: 768px) {
+@media (min-width: 614px) { /* 20% antes de 768px = 614px */
     .nav-menu {
         display: flex;
     }
