@@ -663,6 +663,9 @@ body {
     grid-template-columns: 1fr;
     gap: var(--space-4);
     margin-top: var(--space-6);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .result-card {
@@ -1085,10 +1088,9 @@ body {
         font-size: 2.5rem;
     }
     
-    /* Calculadora - Layout horizontal no desktop */
+    /* Calculadora - Largura máxima para desktop */
     .calculator-results {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-6);
+        max-width: 500px;
     }
     
     .result-value {
@@ -1105,6 +1107,10 @@ body {
 }
 
 @media (min-width: 1200px) {
+    .calculator-results {
+        max-width: 600px;
+    }
+    
     .result-value {
         font-size: 2.5rem;
     }
