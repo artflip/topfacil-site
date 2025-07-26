@@ -810,6 +810,7 @@ body {
     font-size: 1rem;
     transition: var(--transition);
     min-width: 0; /* Evita overflow */
+    min-height: 48px; /* Altura mínima para melhor usabilidade */
 }
 
 .form-group input:focus,
@@ -822,6 +823,7 @@ body {
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
+    padding: var(--space-4);
 }
 
 /* Footer */
@@ -855,6 +857,7 @@ body {
 .footer-contact h4 {
     margin-bottom: var(--space-4);
     color: var(--accent);
+    font-size: 1.125rem;
 }
 
 .footer-links a {
@@ -863,10 +866,17 @@ body {
     text-decoration: none;
     margin-bottom: var(--space-2);
     transition: var(--transition);
+    font-size: 1rem;
 }
 
 .footer-links a:hover {
     color: var(--white);
+}
+
+.footer-contact p {
+    color: var(--gray-300);
+    margin-bottom: var(--space-2);
+    font-size: 1rem;
 }
 
 .footer-bottom {
@@ -1025,87 +1035,13 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    /* Calculadora - Layout horizontal no tablet */
+    /* Calculadora - Mantém layout vertical */
     .calculator-content {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-8);
-    }
-    
-    .calculator-results {
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
-    }
-    
-    .result-value {
-        font-size: 1.5rem;
-    }
-    
-    .result-card h4 {
-        font-size: 1rem;
-    }
-    
-    .result-card p {
-        font-size: 0.875rem;
-    }
-}
-    
-    .logo-text {
-        font-size: 1.6rem; /* Tamanho fixo para tablet */
-    }
-    
-    .slide-title {
-        font-size: 3.5rem;
-    }
-    
-    .slide-buttons {
-        flex-direction: row;
-    }
-    
-    .infographic-container {
-        flex-direction: row;
-        align-items: center;
-        gap: var(--space-6);
-    }
-    
-    .infographic-arrow {
-        display: flex;
-    }
-    
-    .infographic-item {
-        flex: 1;
         flex-direction: column;
-        text-align: center;
-        gap: var(--space-4);
-    }
-    
-    .infographic-content {
-        text-align: center;
-    }
-    
-    .solution-content {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .contact-content {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .footer-content {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    /* Calculadora - Layout horizontal no tablet */
-    .calculator-content {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-8);
     }
     
     .calculator-results {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--space-4);
     }
     
