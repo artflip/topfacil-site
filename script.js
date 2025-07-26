@@ -239,18 +239,29 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
+            
+            // Animação especial para infográfico
+            if (entry.target.classList.contains('infographic-item')) {
+                entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}s`;
+            }
         }
     });
 }, observerOptions);
 
 // Observar elementos para animação
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.problem-card, .solution-point, .contact-item, .result-card');
+    const animatedElements = document.querySelectorAll('.infographic-item, .solution-point, .contact-item, .result-card, .problem-summary');
     
-    animatedElements.forEach(el => {
+    animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        
+        // Adicionar delay para infográfico
+        if (el.classList.contains('infographic-item')) {
+            el.dataset.delay = index * 0.2;
+        }
+        
         observer.observe(el);
     });
 });
