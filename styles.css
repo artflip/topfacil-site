@@ -257,7 +257,7 @@ body {
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    display: none; /* Esconde no mobile */
+    display: none; /* Esconde em todos os dispositivos */
     justify-content: space-between;
     padding: 0 var(--space-2);
     z-index: 10;
@@ -1014,11 +1014,6 @@ body {
     
     .slide-buttons {
         flex-direction: row;
-    }
-    
-    /* Mostra setas do slider no tablet */
-    .slider-controls {
-        display: flex;
     }
     
     .infographic-container {
