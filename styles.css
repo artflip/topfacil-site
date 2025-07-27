@@ -217,7 +217,7 @@ body {
     color: var(--white);
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 var(--space-8);
+    padding: 0 var(--space-4);
 }
 
 .slide-title {
@@ -257,11 +257,10 @@ body {
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    display: none; /* Esconde em todos os dispositivos */
+    display: none;
     justify-content: space-between;
-    padding: 0 var(--space-2);
+    padding: 0 var(--space-6);
     z-index: 10;
-    pointer-events: none;
 }
 
 .slider-btn {
@@ -279,8 +278,6 @@ body {
     justify-content: center;
     font-size: 1.25rem;
     z-index: 5;
-    pointer-events: auto;
-    margin: 0 var(--space-2);
 }
 
 .slider-btn:hover {
