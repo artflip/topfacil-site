@@ -1162,4 +1162,17 @@ body {
     padding: var(--space-6);
     box-shadow: var(--shadow-lg);
     border-top: 1px solid var(--gray-200);
+}
+
+/* Link de verificação de disponibilidade */
+.verificar-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.verificar-link:hover {
+    color: var(--accent-bright);
+    text-decoration: underline;
 } 
