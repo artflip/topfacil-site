@@ -1189,4 +1189,14 @@ body {
 .verificar-link:hover {
     color: var(--accent-bright);
     text-decoration: underline;
-} 
+}
+
+/* Imagens dimensionadas para cada tela, sem baixar as fotos originais. */
+.slide-bg-1 { background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-1.webp'); }
+.slide-bg-2 { background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-2.webp'); }
+.slide-bg-3 { background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-3.webp'); }
+@media (max-width: 767px) {
+    .slide-bg-1 { background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-1-mobile.webp'); }
+    .slide-bg-2 { background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-2-mobile.webp'); }
+    .slide-bg-3 { background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-3-mobile.webp'); }
+}

@@ -26,6 +26,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <link rel="preload" as="image" href="assets/slide-1-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/slide-1.webp" media="(min-width: 768px)" fetchpriority="high">
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
     
@@ -38,7 +41,7 @@
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <img src="assets/topfacil-logo.png" alt="TopFácil Alojamentos" class="logo-img">
+                    <img src="assets/topfacil-logo.png" alt="TopFácil Alojamentos" class="logo-img" width="256" height="154">
                     <span class="logo-text">TopFácil</span>
                 </div>
                 
@@ -65,7 +68,7 @@
         <div class="slider-container">
             <!-- Slide 1 -->
             <div class="slide active">
-                <div class="slide-bg" style="background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-1.jpg')"></div>
+                <div class="slide-bg slide-bg-1"></div>
                 <div class="container">
                     <div class="slide-content">
                         <h1 class="slide-title">
@@ -84,7 +87,7 @@
 
             <!-- Slide 2 -->
             <div class="slide">
-                <div class="slide-bg" style="background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-2.jpg')"></div>
+                <div class="slide-bg slide-bg-2"></div>
                 <div class="container">
                     <div class="slide-content">
                         <h1 class="slide-title">
@@ -103,7 +106,7 @@
 
             <!-- Slide 3 -->
             <div class="slide">
-                <div class="slide-bg" style="background-image: linear-gradient(rgba(26, 54, 61, 0.7), rgba(26, 54, 61, 0.7)), url('assets/slide-3.jpg')"></div>
+                <div class="slide-bg slide-bg-3"></div>
                 <div class="container">
                     <div class="slide-content">
                         <h1 class="slide-title">
@@ -244,7 +247,7 @@
                 </div>
                 
                 <div class="solution-image">
-                    <img src="assets/estrutura-completa.webp" alt="Nossa estrutura completa - TopFácil Alojamentos" class="solution-img">
+                    <img src="assets/estrutura-completa.webp" alt="Nossa estrutura completa - TopFácil Alojamentos" class="solution-img" width="1080" height="720" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -316,8 +319,8 @@
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <h4>Telefone</h4>
-                            <p>(XX) XXXX-XXXX</p>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/5577998560022" target="_blank" rel="noopener noreferrer">(77) 99856-0022</a></p>
                         </div>
                     </div>
                     
@@ -374,7 +377,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="assets/topfacil-logo.png" alt="TopFácil Alojamentos" class="footer-logo-img">
+                    <img src="assets/topfacil-logo.png" alt="TopFácil Alojamentos" class="footer-logo-img" width="256" height="154" loading="lazy" decoding="async">
                     <p>Economia real para sua empresa</p>
                 </div>
                 
@@ -402,7 +405,7 @@
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5500000000000" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/5577998560022" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Falar com a TopFácil pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 

@@ -30,16 +30,16 @@ Resultado confirmado no Search Console:
 | Compartilhamento da home | Preparados metadados Open Graph |
 | www | Redireciona 301 para domínio sem www |
 | HTTP | Retorna 200; ainda precisa redirecionar para HTTPS na camada de hospedagem/Cloudflare |
-| Telefone e WhatsApp | Ainda são exemplos: `(XX) XXXX-XXXX` e `5500000000000`; precisam dos dados reais |
+| Telefone e WhatsApp | Atualizados para `(77) 99856-0022` e `https://wa.me/5577998560022`, conforme imagem fornecida pelo responsável |
 | Formulário | Integração Formspree presente; entrega de mensagens não testada para evitar envio real |
 | Títulos visíveis | Carrossel tem três H1; revisar hierarquia e destacar serviço/cidade no título principal |
 | Promessas de economia | Texto e calculadora usam percentuais e premissas que precisam de validação comercial e explicação |
-| Imagens | Slides de aproximadamente 289 KB, 1,19 MB e 706 KB; otimizar e medir desempenho em celular |
+| Imagens | Slides WebP responsivos: 201 KB no total no celular (antes 2,18 MB; redução de 90,8%); versões desktop totalizam 791 KB |
 
 ## Próximas prioridades
 
 1. Acompanhar o processamento da indexação do blog e artigo e os relatórios do Search Console.
-2. Corrigir contatos com dados fornecidos pelo responsável; confirmar endereço, serviços, capacidade e fotos antes de criar dados estruturados de negócio local.
+2. Confirmar endereço, serviços, capacidade e fotos antes de criar dados estruturados de negócio local.
 3. Conferir e ajustar redirecionamento HTTP → HTTPS preservando caminho e parâmetros.
 4. Medir desempenho móvel e reduzir imagens grandes; revisar carrossel e acessibilidade.
 5. Melhorar o conteúdo comercial com informações reais de estrutura, localização e contratação; revisar premissas da calculadora.
@@ -50,3 +50,9 @@ Resultado confirmado no Search Console:
 Build Jekyll 3.10 de produção e de prévia. Verificação de links e metadados do blog, XML do sitemap e URLs esperadas. O primeiro artigo agora é tratado corretamente como publicado nas verificações e no guia. O sitemap omite posts marcados como rascunho, inclusive em prévias com `--unpublished`.
 
 Referência: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+
+## WhatsApp e desempenho — 21/09/2026
+
+WhatsApp atualizado no contato e botão flutuante. Fotos convertidas para WebP em 800 px (celular) e 1920 px (computador), preservando os originais. Pré-carregamento da primeira foto conforme a tela; imagem da estrutura e logo de rodapé com carregamento adiado. Dimensões explícitas nas imagens para reservar espaço. Build de produção e links do blog validados; prévia conferida em 390 e 1366 px, sem rolagem horizontal e com as imagens corretas em cada tamanho. A redução é de bytes de imagem, não uma medição de tempo de carregamento ou pontuação Lighthouse.
+
+HTTPS já funciona. Redirecionamento HTTP → HTTPS pendente de login do responsável na Cloudflare; o painel abriu na tela de login. Não foi alterado DNS, modo SSL nem HSTS. Após login, conferir certificados, subdomínios e regras existentes antes de ativar redirecionamento no escopo do site.
