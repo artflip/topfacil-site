@@ -1,21 +1,22 @@
 # SEO TopFácil — diagnóstico e implantação
 
-Inspeção em 21/09/2026. Alterações deste pacote ainda precisam ser publicadas.
+Inspeção e publicação em 21/09/2026. Pacote publicado no commit `5e3fc20f061f0461fb33d252fe968d315b5a6294`.
 
 ## Search Console
 
-Propriedade iniciada: `https://topfacilalojamentos.com.br/` (prefixo de URL), na conta escolhida pelo usuário, artur12filipe@gmail.com. Antes do cadastro, o Google informou que não havia propriedades nem verificações pendentes nessa conta. A propriedade cobre a home, o blog e os artigos em HTTPS no domínio sem www.
+Propriedade verificada: `https://topfacilalojamentos.com.br/` (prefixo de URL), na conta escolhida pelo usuário, artur12filipe@gmail.com. Antes do cadastro, o Google informou que não havia propriedades nem verificações pendentes nessa conta. A propriedade cobre a home, o blog e os artigos em HTTPS no domínio sem www.
 
-Método preparado: metatag `google-site-verification` na home. A verificação ainda não foi concluída: o código precisa estar publicado antes de clicar em Verificar. Não remover a metatag depois da confirmação. Nenhuma alteração de DNS foi feita.
+Método confirmado pelo Google: metatag `google-site-verification` na home publicada. Não remover a metatag depois da confirmação. Nenhuma alteração de DNS foi feita.
 
-Após aprovação e publicação:
+Resultado confirmado no Search Console:
 
-1. Conferir a metatag no HTML público da home.
-2. Confirmar que `/sitemap.xml` retorna XML com home, blog e artigos publicados.
-3. Conferir `/robots.txt` público: há uma camada Cloudflare e a resposta atual é gerenciada por ela. Confirmar que a declaração do sitemap aparece após a implantação.
-4. No Search Console, concluir a verificação pela opção Tag HTML.
-5. Enviar `sitemap.xml` na seção Sitemaps.
-6. Inspecionar home, blog e primeiro artigo. Solicitar indexação quando necessário. Registrar o resultado; solicitação não garante indexação nem posição.
+- Propriedade verificada por Tag HTML na conta escolhida pelo usuário.
+- Sitemap enviado e **Processado**, com **3 páginas encontradas** em 21/09/2026.
+- Home já indexada; solicitação de atualização aceita pelo Google.
+- Blog detectado, ainda não indexado; solicitação de indexação aceita pelo Google.
+- Primeiro artigo detectado, ainda não indexado; solicitação de indexação aceita pelo Google.
+- Metatag, canonical, sitemap XML e robots.txt conferidos no site público. A resposta pública de robots.txt inclui a declaração do sitemap.
+- Relatórios gerais ainda em processamento. O Google indica consultar novamente em aproximadamente um dia. Solicitação não garante indexação nem posição.
 
 ## Resultado da inspeção
 
@@ -37,7 +38,7 @@ Após aprovação e publicação:
 
 ## Próximas prioridades
 
-1. Finalizar Search Console, sitemap e inspeção de URLs após publicar este pacote.
+1. Acompanhar o processamento da indexação do blog e artigo e os relatórios do Search Console.
 2. Corrigir contatos com dados fornecidos pelo responsável; confirmar endereço, serviços, capacidade e fotos antes de criar dados estruturados de negócio local.
 3. Conferir e ajustar redirecionamento HTTP → HTTPS preservando caminho e parâmetros.
 4. Medir desempenho móvel e reduzir imagens grandes; revisar carrossel e acessibilidade.
