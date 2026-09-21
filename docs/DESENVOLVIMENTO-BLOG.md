@@ -20,7 +20,7 @@ JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter
 python3 scripts/check_blog.py _site
 ```
 
-Nunca use `--unpublished` na produção. O padrão dos posts é `published: false`; somente artigos com `published: true` são publicados. O artigo de exemplo está deliberadamente desativado.
+Nunca use `--unpublished` na produção. O padrão dos posts é `published: false`; somente artigos com `published: true` são publicados. O primeiro artigo, “Como planejar o alojamento da sua equipe”, foi publicado em 21/09/2026.
 
 O plugin `jekyll-paginate`, suportado pelo GitHub Pages, divide o blog em páginas de nove artigos. Não editar manualmente as páginas geradas em `_site/`.
 

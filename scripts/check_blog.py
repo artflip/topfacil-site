@@ -51,7 +51,7 @@ assert '/blog/' in (root / 'index.html').read_text(), 'Home has no blog link'
 for excluded in ('docs', 'scripts', 'Gemfile', 'Gemfile.lock', '.pages.yml', '_posts', '_config.yml'):
     assert not (root / excluded).exists(), f'Internal file exposed: {excluded}'
 example = root / 'blog/como-planejar-o-alojamento-da-sua-equipe/index.html'
-assert example.exists() == args.preview, 'Draft visibility does not match build type'
+assert example.exists(), 'Published article missing'
 for file in (root / 'blog').rglob('*.html'):
     content = file.read_text()
     parsed = Page()

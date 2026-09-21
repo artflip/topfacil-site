@@ -11,7 +11,7 @@ O blog ficará em https://topfacilalojamentos.com.br/blog/. Cada artigo terá se
 
 ## Situação desta entrega
 
-Blog publicado em 21/09/2026 em https://topfacilalojamentos.com.br/blog/. O Pages CMS está conectado ao repositório `artflip/topfacil-site`, branch `main`. A leitura e o salvamento do artigo de exemplo foram testados pelo painel com a conta `arturflipp`. O exemplo continua como rascunho (`published: false`) e não aparece no site público.
+Blog publicado em 21/09/2026 em https://topfacilalojamentos.com.br/blog/. O Pages CMS está conectado ao repositório `artflip/topfacil-site`, branch `main`. A leitura e o salvamento foram testados pelo painel com a conta `arturflipp`. O primeiro artigo, “Como planejar o alojamento da sua equipe”, está publicado (`published: true`) e aparece no site público.
 
 Acesso direto aos artigos: https://app.pagescms.org/artflip/topfacil-site/main/collection/posts. Para publicar, abra ou crie um artigo, revise, ative **Publicar no site** e clique em **Save**. A atualização é automática após a conclusão do GitHub Pages.
 
