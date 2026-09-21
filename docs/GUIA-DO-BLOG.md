@@ -11,11 +11,13 @@ O blog ficará em https://topfacilalojamentos.com.br/blog/. Cada artigo terá se
 
 ## Situação desta entrega
 
-A configuração foi preparada localmente para revisão. O exemplo está como rascunho (`published: false`): não aparece na geração de produção. A conexão do Pages CMS e a publicação no GitHub ainda precisam ser concluídas após a revisão.
+Blog publicado em 21/09/2026 em https://topfacilalojamentos.com.br/blog/. O Pages CMS está conectado ao repositório `artflip/topfacil-site`, branch `main`. A leitura e o salvamento do artigo de exemplo foram testados pelo painel com a conta `arturflipp`. O exemplo continua como rascunho (`published: false`) e não aparece no site público.
+
+Acesso direto aos artigos: https://app.pagescms.org/artflip/topfacil-site/main/collection/posts. Para publicar, abra ou crie um artigo, revise, ative **Publicar no site** e clique em **Save**. A atualização é automática após a conclusão do GitHub Pages.
 
 ## Primeira conexão do painel
 
-Depois de aprovar o blog e disponibilizar sua configuração no GitHub:
+A primeira conexão já foi concluída. Para entrar novamente ou configurar outra conta autorizada:
 
 1. Acesse https://app.pagescms.org/.
 2. Entre com sua conta GitHub.
@@ -56,7 +58,7 @@ Use JPG, PNG ou WebP, de preferência com até 1600 pixels de largura e tamanho 
 
 A configuração inicial usa login com GitHub. Depois de conectar o painel, configure os acessos dos demais editores no Pages CMS conforme as opções disponíveis para a conta. Não compartilhe sua senha pessoal. Convites e permissões devem ser testados com a conta de quem vai editar antes de entregar a operação.
 
-## Revisão e publicação inicial
+## Referência para futuras alterações no blog
 
 1. Revisar a prévia local do blog e do artigo de exemplo.
 2. Aprovar o visual e decidir se o exemplo será publicado ou substituído por outro texto.
