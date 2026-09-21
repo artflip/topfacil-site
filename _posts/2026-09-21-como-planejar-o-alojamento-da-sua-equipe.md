@@ -1,6 +1,7 @@
 ---
 title: Como planejar o alojamento da sua equipe
-description: Um roteiro simples para organizar a hospedagem dos trabalhadores antes de iniciar uma nova operação.
+description: Um roteiro simples para organizar a hospedagem dos trabalhadores
+  antes de iniciar uma nova operação.
 date: 2026-09-21
 author: Equipe TopFácil
 category: Planejamento
