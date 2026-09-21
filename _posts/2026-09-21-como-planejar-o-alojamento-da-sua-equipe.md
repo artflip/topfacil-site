@@ -5,7 +5,7 @@ description: Um roteiro simples para organizar a hospedagem dos trabalhadores
 date: 2026-09-21
 author: Equipe TopFácil
 category: Planejamento
-published: false
+published: true
 ---
 Uma nova operação envolve muitas decisões. Entre prazos, deslocamentos e organização do trabalho, o alojamento da equipe merece atenção desde o início.
 
