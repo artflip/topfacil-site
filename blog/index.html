@@ -1,0 +1,44 @@
+---
+layout: blog
+title: Blog TopFácil
+description: Ideias práticas para organizar alojamentos, simplificar a logística e cuidar da sua equipe.
+---
+<section class="blog-hero">
+  <div class="container">
+    <p class="eyebrow">BLOG TOPFÁCIL</p>
+    <h1>Mais informação.<br><span>Melhores decisões.</span></h1>
+    <p class="blog-intro">Ideias práticas sobre alojamentos, logística e gestão de equipes. Para simplificar o dia a dia da sua empresa.</p>
+  </div>
+</section>
+<section class="container blog-list" aria-labelledby="artigos">
+  <div class="blog-section-heading"><h2 id="artigos">Últimos artigos</h2><span>Conhecimento que aproxima.</span></div>
+  {% assign articles = paginator.posts | default: site.posts %}
+  {% if articles.size > 0 %}
+  <div class="post-grid">
+    {% for post in articles %}
+    <article class="post-card">
+      {% if post.image and post.image != '' %}
+      <img class="post-card-image" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: '' | escape }}" loading="lazy" width="720" height="450">
+      {% else %}<div class="post-card-placeholder" aria-hidden="true"><span>TopFácil</span><span>Conhecimento para<br>o dia a dia.</span></div>{% endif %}
+      <div class="post-card-content">
+        <div class="post-meta"><span>{{ post.category | default: 'Alojamentos' | escape }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d/%m/%Y' }}</time></div>
+        {% if post.published == false %}<p class="draft-label">Rascunho · somente na prévia</p>{% endif %}
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        <p>{{ post.description | escape }}</p>
+        <span class="read-more" aria-hidden="true">Ler artigo <span>↗</span></span>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% if paginator.total_pages > 1 %}
+  <nav class="blog-pagination" aria-label="Páginas de artigos">
+    {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">← Anteriores</a>{% endif %}
+    <span>Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">Próximos →</a>{% endif %}
+  </nav>
+  {% endif %}
+  {% else %}
+  <div class="blog-empty"><h3>Nosso próximo assunto começa aqui.</h3><p>Em breve, dicas e novidades para ajudar sua empresa a planejar melhor os alojamentos da equipe.</p></div>
+  {% endif %}
+</section>
+{% include blog-cta.html %}

@@ -1,0 +1,29 @@
+---
+layout: blog
+---
+<article class="article-shell">
+  <header class="article-heading container">
+    <a class="back-link" href="{{ '/blog/' | relative_url }}">← Todos os artigos</a>
+    {% if page.published == false %}<p class="draft-label">Rascunho para revisão · este artigo não está publicado</p>{% endif %}
+    <p class="eyebrow">{{ page.category | default: 'Alojamentos' | escape }}</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="article-description">{{ page.description | escape }}</p>
+    <div class="article-byline"><span>{{ page.author | default: 'Equipe TopFácil' | escape }}</span><span aria-hidden="true">·</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d/%m/%Y' }}</time></div>
+  </header>
+  {% if page.image and page.image != '' %}<div class="container article-cover"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' | escape }}" width="1200" height="675"></div>{% endif %}
+  <div class="article-content">{{ content }}</div>
+  <div class="article-end"><a class="back-link" href="{{ '/blog/' | relative_url }}">← Voltar para o blog</a></div>
+</article>
+{% include blog-cta.html %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+  "author": {"@type": "Organization", "name": {{ page.author | default: 'Equipe TopFácil' | jsonify }}},
+  "publisher": {"@type": "Organization", "name": "TopFácil Alojamentos"}
+}
+</script>

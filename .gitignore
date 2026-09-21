@@ -37,4 +37,11 @@ yarn.lock
 
 # Arquivos de build (se usar ferramentas de build)
 dist/
-build/ 
+build/
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/

@@ -235,4 +235,12 @@ Este projeto foi desenvolvido especificamente para a TopFácil Alojamentos. Todo
 
 ---
 
-**Desenvolvido com ❤️ para TopFácil Alojamentos** 
+**Desenvolvido com ❤️ para TopFácil Alojamentos**
+## Blog com Jekyll e Pages CMS
+
+O blog usa o visual do site e fica em `/blog/`. A configuração do painel está em `.pages.yml`, os artigos em `_posts/` e os modelos em `_layouts/`.
+
+- [Guia de administração para a equipe](docs/GUIA-DO-BLOG.md)
+- [Ambiente local e validação](docs/DESENVOLVIMENTO-BLOG.md)
+
+O artigo de exemplo é um rascunho e não é incluído na publicação padrão.

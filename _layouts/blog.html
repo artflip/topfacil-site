@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  {% if page.image and page.image != '' %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
+  {% if jekyll.environment != 'production' or page.published == false %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/blog.css' | relative_url }}">
+</head>
+<body class="blog-body">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="blog-header">
+    <nav class="container blog-nav" aria-label="Navegação principal">
+      <a class="logo" href="{{ '/' | relative_url }}" aria-label="TopFácil — página inicial">
+        <img src="{{ '/assets/topfacil-logo.png' | relative_url }}" alt="" class="logo-img" width="66" height="40">
+        <span class="logo-text">TopFácil</span>
+      </a>
+      <div class="blog-nav-links">
+        <a href="{{ '/' | relative_url }}">Início</a>
+        <a href="{{ '/blog/' | relative_url }}"{% if page.layout != 'post' %} aria-current="page"{% endif %}>Blog</a>
+        <a class="blog-contact-link" href="{{ '/#contato' | relative_url }}">Fale conosco <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+  <main id="conteudo">{{ content }}</main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="{{ '/assets/topfacil-logo.png' | relative_url }}" alt="TopFácil Alojamentos" class="footer-logo-img" loading="lazy">
+          <p>Economia real para sua empresa</p>
+        </div>
+        <div class="footer-links"><h2>Explore</h2><a href="{{ '/' | relative_url }}">Início</a><a href="{{ '/#solucao' | relative_url }}">Nossa solução</a><a href="{{ '/blog/' | relative_url }}">Blog</a></div>
+        <div class="footer-contact"><h2>Contato</h2><p>Luís Eduardo Magalhães - BA</p><a href="mailto:contato@topfacilalojamentos.com.br">contato@topfacilalojamentos.com.br</a></div>
+      </div>
+      <div class="footer-bottom"><p>© {{ site.time | date: '%Y' }} TopFácil Alojamentos. Todos os direitos reservados.</p></div>
+    </div>
+  </footer>
+</body>
+</html>

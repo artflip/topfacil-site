@@ -1,0 +1,59 @@
+media:
+  input: assets/blog
+  output: /assets/blog
+  extensions: [jpg, jpeg, png, webp]
+  rename: safe
+content:
+  - name: posts
+    label: Artigos do blog
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    subfolders: false
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: title
+      fields: [title, published, date]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: description
+        label: Resumo
+        description: Uma ou duas frases para apresentar o artigo e aparecer nas buscas.
+        type: text
+        required: true
+      - name: date
+        label: Data do artigo
+        type: date
+        required: true
+      - name: author
+        label: Autor
+        type: string
+        default: Equipe TopFácil
+      - name: category
+        label: Categoria
+        type: string
+        default: Alojamentos
+      - name: image
+        label: Imagem de capa (opcional)
+        type: image
+      - name: image_alt
+        label: Descrição da imagem
+        description: Descreva a imagem para pessoas que usam leitores de tela.
+        type: string
+      - name: published
+        label: Publicar no site
+        description: Desligado = rascunho. Ligue apenas após revisar. Salvar na versão publicada do repositório atualiza o site.
+        type: boolean
+        default: false
+      - name: body
+        label: Texto do artigo
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: false

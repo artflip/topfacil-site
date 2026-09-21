@@ -1,0 +1,28 @@
+title: TopFácil Alojamentos
+description: Dicas e orientações sobre alojamentos, logística e gestão de equipes em Luís Eduardo Magalhães.
+url: "https://topfacilalojamentos.com.br"
+baseurl: ""
+lang: pt-BR
+timezone: America/Sao_Paulo
+permalink: /blog/:title/
+markdown: kramdown
+future: false
+paginate: 9
+paginate_path: "/blog/pagina/:num/"
+plugins:
+  - jekyll-paginate
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Equipe TopFácil
+      published: false
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - docs
+  - scripts
+  - vendor
