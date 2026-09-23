@@ -14,6 +14,8 @@ layout: blog
   <div class="article-content">{{ content }}</div>
   <div class="article-end"><a class="back-link" href="{{ '/blog/' | relative_url }}">← Voltar para o blog</a></div>
 </article>
+{% assign related = site.posts | where_exp: "post", "post.url != page.url" %}
+{% if related.size > 0 %}<section class="container related-posts"><h2>Continue seu planejamento</h2>{% for post in related limit: 2 %}<a href="{{ post.url | relative_url }}">{{ post.title | escape }} <span aria-hidden="true">↗</span></a>{% endfor %}</section>{% endif %}
 {% include blog-cta.html %}
 <script type="application/ld+json">
 {

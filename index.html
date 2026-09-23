@@ -1,415 +1,70 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alojamento para empresas em Luís Eduardo Magalhães | TopFácil</title>
-    <meta name="description" content="Alojamento para equipes e trabalhadores em Luís Eduardo Magalhães, BA. Centralize sua equipe com a TopFácil e solicite uma proposta para sua empresa.">
-    <link rel="canonical" href="https://topfacilalojamentos.com.br/">
-    <meta name="google-site-verification" content="F9rZ5tQkrQSbaYCihp-L-YQq3ESVKME3Tj3-AJhlLh8" />
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="TopFácil Alojamentos">
-    <meta property="og:title" content="Alojamento para empresas em Luís Eduardo Magalhães | TopFácil">
-    <meta property="og:description" content="Centralize sua equipe em Luís Eduardo Magalhães, BA. Conheça a TopFácil e solicite uma proposta para sua empresa.">
-    <meta property="og:url" content="https://topfacilalojamentos.com.br/">
-    <meta property="og:image" content="https://topfacilalojamentos.com.br/assets/estrutura-completa.webp">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
-    <link rel="shortcut icon" href="assets/favicon.png">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="preload" as="image" href="assets/slide-1-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
-    <link rel="preload" as="image" href="assets/slide-1.webp" media="(min-width: 768px)" fetchpriority="high">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="logo">
-                    <img src="assets/topfacil-logo.png" alt="TopFácil Alojamentos" class="logo-img" width="256" height="154">
-                    <span class="logo-text">TopFácil</span>
-                </div>
-                
-                <div class="nav-menu" id="nav-menu">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#problema" class="nav-link">O Problema</a>
-                    <a href="#solucao" class="nav-link">Nossa Solução</a>
-                    <a href="#economia" class="nav-link">Economia</a>
-                    <a href="/blog/" class="nav-link">Blog</a>
-                    <a href="#contato" class="nav-link">Contato</a>
-                </div>
-                
-                <div class="nav-toggle" id="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Slider -->
-    <section id="home" class="hero-slider">
-        <div class="slider-container">
-            <!-- Slide 1 -->
-            <div class="slide active">
-                <div class="slide-bg slide-bg-1"></div>
-                <div class="container">
-                    <div class="slide-content">
-                        <h1 class="slide-title">
-                            Pare de perder dinheiro com <span class="highlight">alugueis espalhados</span>
-                        </h1>
-                        <p class="slide-subtitle">
-                            Empresas como a sua gastam fortunas com múltiplos alugueis pela cidade
-                        </p>
-                        <div class="slide-buttons">
-                            <a href="#economia" class="btn btn-primary">Calcular economia</a>
-                            <a href="#contato" class="btn btn-secondary">Falar conosco</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="slide">
-                <div class="slide-bg slide-bg-2"></div>
-                <div class="container">
-                    <div class="slide-content">
-                        <h1 class="slide-title">
-                            <span class="highlight">Seus Trabalhadores</span> em um só lugar!
-                        </h1>
-                        <p class="slide-subtitle">
-                            Centralize sua equipe e simplifique a logística da sua empresa
-                        </p>
-                        <div class="slide-buttons">
-                            <a href="#solucao" class="btn btn-primary">Ver estrutura</a>
-                            <a href="#contato" class="btn btn-secondary">Agendar visita</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="slide">
-                <div class="slide-bg slide-bg-3"></div>
-                <div class="container">
-                    <div class="slide-content">
-                        <h1 class="slide-title">
-                            <span class="highlight">Economia real</span> para sua empresa
-                        </h1>
-                        <p class="slide-subtitle">
-                            Reduza custos, aumente produtividade e simplifique a gestão da sua equipe
-                        </p>
-                        <div class="slide-buttons">
-                            <a href="#economia" class="btn btn-primary">Ver economia</a>
-                            <a href="#contato" class="btn btn-secondary">Solicitar orçamento</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider Controls -->
-            <div class="slider-controls">
-                <button class="slider-btn prev" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="slider-btn next" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-
-            <!-- Slider Indicators -->
-            <div class="slider-indicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- O Problema - Infográfico Moderno -->
-    <section id="problema" class="problem-infographic">
-        <div class="container">
-            <div class="section-header">
-                <h2>O Problema que Você Conhece</h2>
-                <p>Empresas como a sua enfrentam desafios reais</p>
-            </div>
-            
-            <div class="infographic-container">
-                <div class="infographic-item">
-                    <div class="infographic-icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <div class="infographic-content">
-                        <h3>Múltiplos Alugueis</h3>
-                        <p>Fortunas gastas com casas espalhadas</p>
-                        <div class="problem-tag">Alto Custo</div>
-                    </div>
-                </div>
-                
-                <div class="infographic-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="infographic-item">
-                    <div class="infographic-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <div class="infographic-content">
-                        <h3>Logística Complexa</h3>
-                        <p>Equipe espalhada e deslocamentos</p>
-                        <div class="problem-tag">Ineficiência</div>
-                    </div>
-                </div>
-                
-                <div class="infographic-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="infographic-item">
-                    <div class="infographic-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <div class="infographic-content">
-                        <h3>Gestão Difícil</h3>
-                        <p>Múltiplos contratos e dor de cabeça</p>
-                        <div class="problem-tag">Complexidade</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="problem-summary">
-                <div class="summary-icon">
-                    <i class="fas fa-exclamation-triangle"></i>
-                </div>
-                <h3>Resultado: Perda de Dinheiro e Produtividade</h3>
-                <p>Empresas gastam até 30% a mais com custos extras e perdem produtividade com equipes dispersas</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nossa Solução -->
-    <section id="solucao" class="solution">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nossa Solução</h2>
-                <p>Centralize sua equipe e economize</p>
-            </div>
-            
-            <div class="solution-content">
-                <div class="solution-text">
-                    <div class="solution-point">
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Seus Trabalhadores Centralizados</h3>
-                            <p>Toda sua equipe em um só lugar, facilitando gestão e controle <a href="#contato" class="verificar-link">(verificar disponibilidade)</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="solution-point">
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Logística Simplificada</h3>
-                            <p>Um endereço só, transporte otimizado e equipe unida</p>
-                        </div>
-                    </div>
-                    
-                    <div class="solution-point">
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Economia Real</h3>
-                            <p>Reduza custos com alugueis e aumente a produtividade da equipe</p>
-                        </div>
-                    </div>
-                    
-                    <div class="solution-point">
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <h3>Gestão Facilitada</h3>
-                            <p>Controle total da equipe, um contrato só e suporte completo</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="solution-image">
-                    <img src="assets/estrutura-completa.webp" alt="Nossa estrutura completa - TopFácil Alojamentos" class="solution-img" width="1080" height="720" loading="lazy" decoding="async">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Economia -->
-    <section id="economia" class="economy">
-        <div class="container">
-            <div class="section-header">
-                <h2>Economia Real</h2>
-                <p>Veja quanto sua empresa pode economizar</p>
-            </div>
-            
-            <div class="economy-calculator">
-                <div class="calculator-header">
-                    <h3>Calculadora de Economia</h3>
-                    <p>Compare os custos atuais com nossa solução</p>
-                </div>
-                
-                <div class="calculator-content">
-                    <div class="calculator-inputs">
-                        <div class="input-group">
-                            <label>Quantos trabalhadores você tem?</label>
-                            <input type="number" id="workers" min="10" max="100" value="30">
-                        </div>
-                        
-                        <div class="input-group">
-                            <label>Valor médio do aluguel por trabalhador (R$)</label>
-                            <input type="number" id="rent" min="500" max="2000" value="800">
-                        </div>
-                        
-                        <button id="calculateBtn" class="btn btn-primary">Calcular Economia</button>
-                    </div>
-                    
-                    <div class="calculator-results">
-                        <div class="result-card current">
-                            <h4>Custo Atual</h4>
-                            <div class="result-value" id="currentCost">R$ 24.000</div>
-                            <p>por mês</p>
-                        </div>
-                        
-                        <div class="result-card savings">
-                            <h4>Economia</h4>
-                            <div class="result-value" id="savings">R$ 8.000</div>
-                            <p>por mês</p>
-                        </div>
-                        
-                        <div class="result-card total">
-                            <h4>Total Economia/Ano</h4>
-                            <div class="result-value" id="yearlySavings">R$ 96.000</div>
-                            <p>por ano</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Vamos Conversar?</h2>
-                <p>Transforme a logística da sua empresa hoje mesmo</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>WhatsApp</h4>
-                            <p><a href="https://wa.me/5577998560022" target="_blank" rel="noopener noreferrer">(77) 99856-0022</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>E-mail</h4>
-                            <p>contato@topfacilalojamentos.com.br</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Localização</h4>
-                            <p>Luís Eduardo Magalhães - BA</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/mblkobwj" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="company" name="company" placeholder="Nome da empresa" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="contact" name="contact" placeholder="Nome do contato" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="E-mail" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="Telefone" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Conte-nos sobre sua necessidade (quantidade de trabalhadores, período, etc.)" rows="4" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">Quero economizar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/topfacil-logo.png" alt="TopFácil Alojamentos" class="footer-logo-img" width="256" height="154" loading="lazy" decoding="async">
-                    <p>Economia real para sua empresa</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Links</h4>
-                    <a href="#home">Home</a>
-                    <a href="#problema">O Problema</a>
-                    <a href="#solucao">Nossa Solução</a>
-                    <a href="#economia">Economia</a>
-                    <a href="/blog/">Blog</a>
-                    <a href="#contato">Contato</a>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>Contato</h4>
-                    <p>Luís Eduardo Magalhães - BA</p>
-                    <p>contato@topfacilalojamentos.com.br</p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 TopFácil Alojamentos. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/5577998560022" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Falar com a TopFácil pelo WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TopFácil | Alojamentos para empresas em Luís Eduardo Magalhães</title>
+  <meta name="description" content="Sua equipe em um só lugar. Simplifique a hospedagem e a logística da sua empresa com a TopFácil Alojamentos em Luís Eduardo Magalhães, BA. Solicite uma proposta.">
+  <meta name="theme-color" content="#171e20">
+  <link rel="canonical" href="https://topfacilalojamentos.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="TopFácil — Sua equipe bem instalada. Sua operação mais simples.">
+  <meta property="og:description" content="Alojamentos para empresas em Luís Eduardo Magalhães, BA. Conheça a solução e solicite uma proposta para sua equipe.">
+  <meta property="og:url" content="https://topfacilalojamentos.com.br/">
+  <meta property="og:image" content="https://topfacilalojamentos.com.br/assets/estrutura-completa.webp">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/experience.css?v=4.2">
+  <script src="assets/lib/bootstrap.min.js" defer></script>
+  <script src="assets/lib/lucide.min.js" defer></script>
+  <script src="assets/navigation.js?v=4.2" defer></script>
+<script src="script.js?v=4.2" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"TopFácil Alojamentos","url":"https://topfacilalojamentos.com.br/","logo":"https://topfacilalojamentos.com.br/assets/topfacil-logo.png","email":"contato@topfacilalojamentos.com.br","areaServed":{"@type":"City","name":"Luís Eduardo Magalhães"}}</script>
+<meta name="google-site-verification" content="F9rZ5tQkrQSbaYCihp-L-YQq3ESVKME3Tj3-AJhlLh8" />
+<meta property="og:site_name" content="TopFácil Alojamentos">
+</head><body class="experience-body"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-header"><div class="shell header-inner"><a class="brand" href="/#home" aria-label="TopFácil — início"><img src="/assets/topfacil-logo.png" width="48" height="29" alt=""><span>TopFácil<small>ALOJAMENTOS</small></span></a><nav class="desktop-nav" aria-label="Navegação principal"><a href="/#solucao">A solução</a><a href="/#economia">Economia</a><a href="/blog/">Blog</a></nav><div class="header-actions"><a class="header-quote" href="/#contato">Sua proposta <i data-lucide="arrow-up-right"></i></a><button class="menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteMenu" aria-controls="siteMenu" aria-label="Abrir menu"><span>Menu</span> <i data-lucide="menu"></i></button></div></div></header>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="siteMenu" aria-labelledby="menuTitle"><div class="offcanvas-header"><span class="eyebrow" id="menuTitle">EXPLORE A TOPFÁCIL</span><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar menu"></button></div><div class="offcanvas-body"><nav class="panel-nav" aria-label="Menu completo"><a href="/#home"><small>01</small> Início <span>↗</span></a><a href="/#solucao"><small>02</small> Nossa solução <span>↗</span></a><a href="/#economia"><small>03</small> Economia <span>↗</span></a><a href="/#contato"><small>04</small> Sua proposta <span>↗</span></a><a href="/blog/"><small>+</small> Blog <span>↗</span></a></nav><div class="menu-contact"><span class="eyebrow">SUA BASE NO OESTE BAIANO</span><p>Luís Eduardo Magalhães · BA</p><a href="mailto:contato@topfacilalojamentos.com.br">contato@topfacilalojamentos.com.br</a></div></div></div>
+<noscript><nav class="shell fallback-nav" aria-label="Menu"><a href="/#home">Início</a><a href="/#solucao">Solução</a><a href="/#economia">Economia</a><a href="/blog/">Blog</a><a href="/#contato">Proposta</a></nav><style>.menu-toggle{display:none}</style></noscript><nav class="story-rail" aria-label="Capítulos"><a href="#home" aria-label="01 — Início"><span>01</span></a><a href="#solucao" aria-label="02 — Solução"><span>02</span></a><a href="#economia" aria-label="03 — Economia"><span>03</span></a><a href="#contato" aria-label="04 — Proposta"><span>04</span></a></nav>
+<main id="conteudo">
+<section class="scene scene-hero" id="home" aria-labelledby="homeTitle"><div class="hero-landscape" data-parallax><img src="assets/estrutura-completa.webp" alt="Panorama de Luís Eduardo Magalhães ao pôr do sol" width="1080" height="720" fetchpriority="high"></div><div class="hero-grain" aria-hidden="true"></div><div class="shell scene-inner"><div class="hero-topline"><span class="eyebrow">ALOJAMENTOS PARA EMPRESAS</span><span class="eyebrow">LUÍS EDUARDO MAGALHÃES / BA</span></div><div class="hero-main"><span class="hero-kicker"><span></span> SUA PRÓXIMA BASE COMEÇA AQUI</span><h1 id="homeTitle" tabindex="-1">Sua equipe<br> no lugar<br> <span>certo.</span></h1><div class="hero-description"><p>Reúna sua equipe.<br> Simplifique sua operação.</p><a class="round-link" href="#solucao" aria-label="Conhecer a solução"><i data-lucide="arrow-down"></i></a></div></div><div class="scene-bottom"><a class="next-link" href="#solucao">Conheça a TopFácil <i data-lucide="arrow-down-right"></i></a><span class="scroll-cue"><span class="scroll-track"></span> DESLIZE PARA DESCOBRIR</span><span class="photo-credit">Vista de Luís Eduardo Magalhães</span></div></div></section>
+<section class="scene scene-solution" id="solucao" aria-labelledby="solutionTitle"><div class="shell scene-inner"><div class="section-meta"><span class="eyebrow">02 — A SOLUÇÃO</span><span class="eyebrow">MENOS DISPERSÃO. MAIS DIREÇÃO.</span></div><div class="solution-intro"><h2 id="solutionTitle" tabindex="-1">Cada pessoa<br> no seu trabalho.<br> <span>Todas na mesma base.</span></h2><p>Alojamento para a equipe.<br> Organização para quem está à frente.</p></div><div class="service-lines"><article><span class="service-number">01</span><h3>Reúna.</h3><p>Centralize o alojamento da equipe, conforme a disponibilidade.</p><i data-lucide="users-round"></i></article><article><span class="service-number">02</span><h3>Organize.</h3><p>Tenha uma base para planejar trajetos e a rotina da operação.</p><i data-lucide="route"></i></article><article><span class="service-number">03</span><h3>Simplifique.</h3><p>Alinhe período, serviços e condições em uma conversa direta.</p><i data-lucide="messages-square"></i></article></div><div class="scene-bottom"><a href="#economia" class="next-link">E onde entra a economia? <i data-lucide="arrow-down-right"></i></a><a class="small-link" href="/blog/">Ideias para planejar sua equipe ↗</a></div></div></section>
+<section class="scene scene-economy" id="economia" aria-labelledby="economyTitle"><div class="shell scene-inner"><div class="section-meta"><span class="eyebrow">03 — A ECONOMIA</span><span class="eyebrow">OLHE PARA A OPERAÇÃO INTEIRA</span></div><div class="economy-body"><div class="economy-title"><h2 id="economyTitle" tabindex="-1">O custo<br> não é só<br> <span>o aluguel.</span></h2><p>Endereços, deslocamentos e tempo de gestão também entram na conta.</p></div><div class="cost-composition"><span class="eyebrow">O QUE VALE CONSIDERAR</span><div class="cost-item"><span>01</span><strong>Alojamento</strong><i data-lucide="building-2"></i></div><div class="cost-item"><span>02</span><strong>Logística</strong><i data-lucide="route"></i></div><div class="cost-item"><span>03</span><strong>Gestão</strong><i data-lucide="clock-3"></i></div><div class="cost-conclusion"><i data-lucide="corner-down-right"></i><div><h3>Uma proposta.<br> Uma visão mais clara.</h3><p>Compare o conjunto e escolha o que faz sentido para sua empresa.</p></div></div></div></div><div class="scene-bottom"><a class="next-link" href="#contato">Quero uma proposta para minha equipe <i data-lucide="arrow-down-right"></i></a><p class="economy-footnote">A economia depende da localização,<br> do período e das condições contratadas.</p></div></div></section>
+<section class="scene scene-contact" id="contato" aria-labelledby="contactTitle"><div class="shell scene-inner"><div class="section-meta"><span class="eyebrow">04 — SUA PRÓXIMA BASE</span><span class="eyebrow">VAMOS CONVERSAR?</span></div><div class="contact-layout"><div class="contact-copy"><h2 id="contactTitle" tabindex="-1">Você traz<br> a equipe.<br> <span>A gente<br> facilita.</span></h2><p>Conte o que você precisa.<br> O próximo passo a gente planeja junto.</p><span class="contact-tag"><i data-lucide="check"></i> PROPOSTA SEM COMPROMISSO</span><a class="small-link" href="mailto:contato@topfacilalojamentos.com.br">Prefere conversar por e-mail? ↗</a></div><form id="contactForm" class="contact-form card" action="https://formspree.io/f/mblkobwj" method="POST"><h3>Vamos começar pela sua equipe.</h3>
+  <div class="step-progress"><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div><span class="step-indicator" id="stepIndicator" aria-live="polite" aria-atomic="true">Passo 1 de 4</span></div>
+  <input type="hidden" name="_subject" value="Proposta de alojamento — TopFácil">
+  <noscript><p>Preencha as perguntas abaixo. Se a quantidade ou o período ainda não estiverem definidos, deixe o campo em branco e marque a opção correspondente.</p></noscript>
+  <div class="step-container">
+    <div class="step-content active" data-step="1">
+      <p>Para quantas pessoas?</p>
+      <div class="mb-3"><label class="form-label" for="teamSize">Quantidade aproximada</label><input class="form-control" id="teamSize" name="workers" type="number" min="1" max="10000" step="1" placeholder="Ex.: 30"></div>
+      <label class="checkbox-wrap"><input type="checkbox" id="undecidedWorkers" name="workers_undecided" value="Ainda definindo"> Ainda estou definindo a quantidade</label>
+      <div class="step-actions"><button type="button" class="btn btn-lime btn-next">Continuar <i data-lucide="arrow-right"></i></button></div>
+    </div>
+    <div class="step-content" data-step="2">
+      <p>Quando sua equipe chega?</p>
+      <div class="mb-3"><label class="form-label" for="period">Período previsto</label><input class="form-control" id="period" name="period" placeholder="Ex.: início em outubro, por 3 meses" maxlength="160"></div>
+      <label class="checkbox-wrap"><input type="checkbox" id="undecidedPeriod" name="period_undecided" value="Datas não definidas"> Ainda não sei as datas exatas</label>
+      <div class="step-actions"><button type="button" class="btn btn-outline btn-prev">Voltar</button><button type="button" class="btn btn-lime btn-next">Continuar <i data-lucide="arrow-right"></i></button></div>
+    </div>
+    <div class="step-content" data-step="3">
+      <p>Como sua empresa organiza o alojamento hoje? <span>(Opcional)</span></p>
+      <div class="radio-card-grid">
+        <label class="radio-card"><input type="radio" name="current_scenario" value="Casas alugadas"> Casas alugadas</label>
+        <label class="radio-card"><input type="radio" name="current_scenario" value="Hotéis/Pousadas"> Hotéis/Pousadas</label>
+        <label class="radio-card"><input type="radio" name="current_scenario" value="Estrutura própria"> Estrutura própria</label>
+        <label class="radio-card"><input type="radio" name="current_scenario" value="Primeira contratação"> Primeira contratação</label>
+      </div>
+      <div class="step-actions"><button type="button" class="btn btn-outline btn-prev">Voltar</button><button type="button" class="btn btn-lime btn-next">Continuar <i data-lucide="arrow-right"></i></button></div>
+    </div>
+    <div class="step-content" data-step="4">
+      <div class="summary-box" id="summaryBox"></div>
+      <p>Para quem enviamos a proposta?</p>
+      <div class="row g-3"><div class="col-sm-6"><label class="form-label" for="contact">Seu nome *</label><input class="form-control" id="contact" name="contact" autocomplete="name" placeholder="Como podemos te chamar?" maxlength="120" required></div><div class="col-sm-6"><label class="form-label" for="company">Empresa *</label><input class="form-control" id="company" name="company" autocomplete="organization" placeholder="Nome da empresa" maxlength="160" required></div><div class="col-sm-6"><label class="form-label" for="email">E-mail *</label><input class="form-control" id="email" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com.br" maxlength="254" required></div><div class="col-sm-6"><label class="form-label" for="phone">Telefone (opcional)</label><input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(77) 99999-9999" maxlength="25" pattern="[+0-9() .\-]{10,25}"></div><div class="col-12"><label class="form-label" for="message">Algo mais que precisamos saber?</label><textarea class="form-control" id="message" name="message" rows="2" maxlength="3000" placeholder="Conte sobre sua operação e necessidades."></textarea></div></div>
+      <div class="step-actions"><button type="button" class="btn btn-outline btn-prev">Voltar</button><button class="btn btn-dark" type="submit">Solicitar proposta <i data-lucide="arrow-up-right"></i></button></div>
+    </div>
+  </div>
+  <p class="privacy-note">Seus dados serão enviados pelo Formspree, nosso serviço de formulários.</p><p class="form-status" id="formStatus" tabindex="-1" role="status" aria-live="polite"></p><span class="form-assurance"><i data-lucide="shield-check"></i> Sem compromisso. Atendimento para sua empresa.</span></form></div></div></section>
+</main><footer class="site-footer"><div class="shell"><div class="footer-top"><p>Uma boa base muda<br>o ritmo da operação.</p><a href="/#contato" class="footer-cta">Vamos conversar <i data-lucide="arrow-up-right"></i></a></div><div class="footer-grid"><nav aria-label="Navegação do rodapé"><span class="eyebrow">EXPLORE</span><a href="/#solucao">Nossa solução</a><a href="/#economia">Economia</a><a href="/blog/">Blog</a><a href="/#contato">Sua proposta</a></nav><div><span class="eyebrow">FALE COM A TOPFÁCIL</span><a href="mailto:contato@topfacilalojamentos.com.br">contato@topfacilalojamentos.com.br</a><a href="https://wa.me/5577998560022">WhatsApp: (77) 99856-0022 ↗</a><p>Luís Eduardo Magalhães<br>Bahia, Brasil</p></div><div class="footer-location"><span class="location-cross" aria-hidden="true">✳</span><span>OESTE BAIANO.<br>SEU PRÓXIMO DESTINO.</span></div></div><div class="footer-wordmark" aria-hidden="true">TopFácil<span>↗</span></div><div class="footer-bottom"><span>© <span data-year>2026</span> TopFácil Alojamentos</span><span>Feito para receber. Pensado para facilitar.</span></div></div></footer></body></html>

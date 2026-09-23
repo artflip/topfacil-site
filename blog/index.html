@@ -6,20 +6,20 @@ description: Ideias práticas para organizar alojamentos, simplificar a logísti
 <section class="blog-hero">
   <div class="container">
     <p class="eyebrow">BLOG TOPFÁCIL</p>
-    <h1>Mais informação.<br><span>Melhores decisões.</span></h1>
-    <p class="blog-intro">Ideias práticas sobre alojamentos, logística e gestão de equipes. Para simplificar o dia a dia da sua empresa.</p>
+    <h1>Boas decisões.<br><span>Começam aqui.</span></h1>
+    <p class="blog-intro">Alojamento, logística e equipe. Ideias para colocar sua operação em movimento.</p>
   </div>
 </section>
 <section class="container blog-list" aria-labelledby="artigos">
-  <div class="blog-section-heading"><h2 id="artigos">Últimos artigos</h2><span>Conhecimento que aproxima.</span></div>
+  <div class="blog-section-heading"><h2 id="artigos">Últimos artigos</h2><span>DO PLANEJAMENTO À OPERAÇÃO</span></div>
   {% assign articles = paginator.posts | default: site.posts %}
   {% if articles.size > 0 %}
   <div class="post-grid">
     {% for post in articles %}
-    <article class="post-card">
+    <article class="post-card{% if forloop.first %} featured-post{% endif %}">
       {% if post.image and post.image != '' %}
       <img class="post-card-image" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: '' | escape }}" loading="lazy" width="720" height="450">
-      {% else %}<div class="post-card-placeholder" aria-hidden="true"><span>TopFácil</span><span>Conhecimento para<br>o dia a dia.</span></div>{% endif %}
+      {% else %}<div class="post-card-placeholder" aria-hidden="true"><span>TopFácil</span><span>Uma boa base.<br>Um novo começo.</span></div>{% endif %}
       <div class="post-card-content">
         <div class="post-meta"><span>{{ post.category | default: 'Alojamentos' | escape }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d/%m/%Y' }}</time></div>
         {% if post.published == false %}<p class="draft-label">Rascunho · somente na prévia</p>{% endif %}
