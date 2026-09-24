@@ -6,3 +6,4 @@ html:has(.public-home){scroll-snap-type:none}.public-home{--header-height:80px}.
 /* Revisão da copy e fotografias provisórias para o cenário de lançamento. */
 .hero-copy h1{font-size:clamp(58px,6.2vw,92px)}.hero-visual>img{filter:saturate(.75);object-position:center}.space-photo img{aspect-ratio:4/3;object-fit:cover}.stay-card h3{min-height:0}.hero-visual figcaption{letter-spacing:.6px;font-size:9px;line-height:1.6}.location-section h2{font-size:clamp(36px,3.7vw,54px)}
 @media(max-width:767px){.hero-copy h1{font-size:clamp(46px,12.6vw,70px)}.hero-visual{min-height:340px}.hero-visual>img{object-position:center 48%}.hero-visual figcaption{font-size:8px}.business-banner .action{font-size:12px}}
+.stay-form .email-action{background:transparent;color:var(--paper);border:1px solid #9aa9a3;margin-top:12px}.stay-form .email-action:hover{background:#3d4e50}.stay-form>p a{text-decoration:underline;text-underline-offset:3px}.location-art .text-action{font-size:14px}
