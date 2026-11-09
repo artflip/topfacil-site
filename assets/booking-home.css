@@ -28,3 +28,8 @@ html:has(.booking-home){scroll-snap-type:none}.booking-home{background:#f5f4ee}.
 .address-link,.text-action{min-height:44px;display:inline-flex;align-items:center}
 }
 .property-tabs a.is-active{box-shadow:inset 0 -2px #182124;font-weight:600}
+.hero-booking-cta{display:none}
+@media(max-width:800px){
+.hero-booking-cta{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:52px;margin:16px 0 2px;padding:14px 18px;background:#f0b65d;color:#182124;border-radius:4px;font-size:15px;font-weight:600}
+.hero-booking-cta span{font-size:13px}
+}

@@ -16,7 +16,8 @@ form.addEventListener('submit',event=>{
  location.assign(email?'mailto:contato@topfacilalojamentos.com.br?subject='+encodeURIComponent('Consulta de hospedagem — TopFácil')+'&body='+encodeURIComponent(message):'https://wa.me/5577998560022?text='+encodeURIComponent(message));
 });
 const mobile=document.querySelector('.mobile-contact');
-function syncMobileBar(){if(!mobile)return;const nearBottom=window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-140;const atTop=window.scrollY<240;mobile.classList.toggle('is-hidden',nearBottom||atTop);}
+const heroCta=document.querySelector('.hero-booking-cta');
+function syncMobileBar(){if(!mobile)return;const nearBottom=window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-140;const heroOut=heroCta?heroCta.getBoundingClientRect().bottom<0:window.scrollY>=240;mobile.classList.toggle('is-hidden',nearBottom||!heroOut);}
 window.addEventListener('scroll',syncMobileBar,{passive:true});window.addEventListener('resize',syncMobileBar);syncMobileBar();
 
 
