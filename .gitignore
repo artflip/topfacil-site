@@ -38,6 +38,12 @@ yarn.lock
 # Arquivos de build (se usar ferramentas de build)
 dist/
 build/
+# Arquivo local das versões anteriores (não publicar nem versionar)
+_versoes/
+
+# Relatórios locais do impeccable
+.impeccable/
+
 # Jekyll
 _site/
 .jekyll-cache/

@@ -16,6 +16,8 @@ form.addEventListener('submit',event=>{
  location.assign(email?'mailto:contato@topfacilalojamentos.com.br?subject='+encodeURIComponent('Consulta de hospedagem — TopFácil')+'&body='+encodeURIComponent(message):'https://wa.me/5577998560022?text='+encodeURIComponent(message));
 });
 const mobile=document.querySelector('.mobile-contact');
+function syncMobileBar(){if(!mobile)return;const nearBottom=window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-140;const atTop=window.scrollY<240;mobile.classList.toggle('is-hidden',nearBottom||atTop);}
+window.addEventListener('scroll',syncMobileBar,{passive:true});window.addEventListener('resize',syncMobileBar);syncMobileBar();
 
 
 function updateSummary(){
@@ -55,3 +57,14 @@ const gallery=document.querySelector('.photo-grid');
 function updateGallery(){const index=Math.round(gallery.scrollLeft/(gallery.clientWidth+8));document.getElementById('photoCount').textContent=(index+1)+' / 2';document.getElementById('previousPhoto').disabled=index===0;document.getElementById('nextPhoto').disabled=index===1;}
 function slidePhoto(direction){gallery.scrollBy({left:direction*(gallery.clientWidth+8),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
 document.getElementById('previousPhoto').addEventListener('click',()=>slidePhoto(-1));document.getElementById('nextPhoto').addEventListener('click',()=>slidePhoto(1));gallery.addEventListener('scroll',updateGallery,{passive:true});window.addEventListener('resize',updateGallery);updateGallery();
+const tabs=[...document.querySelectorAll('.property-tabs a')];
+const tabSections=tabs.map(tab=>document.querySelector(tab.getAttribute('href'))).filter(Boolean);
+if(tabs.length&&tabSections.length){
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(!entry.isIntersecting)return;
+   tabs.forEach(tab=>{const active=tab.getAttribute('href')==='#'+entry.target.id;tab.classList.toggle('is-active',active);if(active)tab.setAttribute('aria-current','true');else tab.removeAttribute('aria-current');});
+  });
+ },{rootMargin:'-45% 0px -50% 0px'});
+ tabSections.forEach(section=>observer.observe(section));
+}

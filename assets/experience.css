@@ -7,3 +7,57 @@
 @media(max-width:360px){.shell,.container{padding-left:20px;padding-right:20px}.hero-main h1{font-size:64px}.hero-kicker{font-size:6px}.next-link{font-size:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none}*,*::before,*::after{animation:none!important;transition:none!important}.hero-landscape{transform:none!important}}
 .btn-next,.btn-prev{display:none}.steps-ready .btn-next,.steps-ready .btn-prev{display:inline-flex}
+/* Revisão de legibilidade e contraste */
+.desktop-nav{font-size:14px}
+.header-quote{font-size:13px}
+.menu-toggle{font-size:13px}
+.brand small{font-size:10px;letter-spacing:2.6px}
+.eyebrow{font-size:11px}
+.hero-kicker{font-size:11px}
+.hero-topline .eyebrow:first-child{font-size:11px}
+.hero-topline .eyebrow:last-child{font-size:10px}
+.photo-credit{font-size:11px}
+.scroll-cue{font-size:10px}
+.section-meta .eyebrow{font-size:10px}
+.solution-intro h2 span{color:#5b6760}
+.service-number{font-size:12px;color:#4f5b55}
+.service-lines p{font-size:13px}
+.small-link{font-size:12px}
+.economy-title h2 span{color:#5a4020}
+.cost-item>span{font-size:11px}
+.economy-footnote{font-size:11px}
+.cost-conclusion p{font-size:13px}
+.cost-composition>.eyebrow{font-size:11px}
+.contact-tag{font-size:11px}
+.footer-grid .eyebrow{font-size:11px}
+.footer-grid a{font-size:13px}
+.footer-grid p{font-size:13px}
+.footer-location>span:last-child{font-size:11px}
+.footer-bottom{font-size:11px}
+.menu-contact>.eyebrow{font-size:11px}
+.menu-contact>a{font-size:13px}
+.panel-nav small{font-size:12px}
+.form-label{font-size:12px}
+.checkbox-wrap,.privacy-note,.form-assurance{font-size:11px}
+.step-actions .btn{font-size:12px}
+/* Segunda passada de legibilidade */
+.brand small{font-size:11px}
+.hero-topline .eyebrow:last-child{font-size:11px}
+.section-meta .eyebrow{font-size:11px}
+.scroll-cue{font-size:11px}
+.footer-bottom{font-size:12px}
+.footer-location>span:last-child{font-size:12px}
+.step-indicator,.summary-item,.privacy-note,.form-assurance,.contact-return>span,.step-content>p>span{font-size:12px}
+.summary-item strong{font-size:13px}
+.checkbox-wrap{font-size:12px}
+.economy-title h2 span{color:#4d3f24}
+/* Toque, contraste e leitura no mobile */
+@media(max-width:800px){
+.offcanvas-header .btn-close{width:44px;height:44px;padding:10px}
+.footer-grid a{display:block;min-height:44px;padding:11px 0;margin:0}
+.footer-cta{min-height:44px}
+.small-link,.contact-return a,.contact-copy>.small-link{display:inline-flex;align-items:center;min-height:44px;font-size:12px}
+.story-rail a{width:44px;height:44px}
+.story-rail{gap:4px}
+}
+.cost-item>span{opacity:.85}

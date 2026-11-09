@@ -5,3 +5,26 @@ html:has(.booking-home){scroll-snap-type:none}.booking-home{background:#f5f4ee}.
 .booking-fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.booking-fields>div{min-width:0}.booking-home .footer-wordmark{font-size:clamp(50px,15vw,90px)}
 .gallery-controls{display:none}#bookingDialog{padding:0;border:0;border-radius:18px 18px 0 0;width:100%;max-width:600px;max-height:90dvh;margin:auto auto 0;background:white;color:#182124;overscroll-behavior:contain}#bookingDialog::backdrop{background:#101b20a8}.booking-dialog-header{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:1px solid #dde2db;position:sticky;top:0;background:white;z-index:1;font-size:11px;letter-spacing:1px}#closeBooking{min-height:44px;padding:8px 12px;background:#eff1eb;border:0;border-radius:4px;font-size:13px;letter-spacing:0}#bookingDialog .stay-form{border:0;box-shadow:none;padding-bottom:calc(25px + env(safe-area-inset-bottom))}.booking-modal-open{overflow:hidden}
 @media(max-width:800px){.photo-grid{display:flex;height:280px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.photo-grid::-webkit-scrollbar{display:none}.photo-open{flex:0 0 100%;scroll-snap-align:start}.photo-open img{object-position:center 45%}.gallery-controls{display:flex;gap:12px;align-items:center;justify-content:space-between;padding-top:8px;font-size:11px}.gallery-controls button{width:44px;height:44px;border:1px solid #c9d0c6;background:transparent;border-radius:50%;font-size:18px}.gallery-controls button:disabled{opacity:.35}.gallery-controls>span:nth-child(3){color:#596363}.property-heading{margin-bottom:20px}.property-heading h1{font-size:29px}.property-heading .eyebrow{font-size:9px}.property-section{padding:25px 0}.property-tabs{gap:20px}.property-tabs a{font-size:12px}.photo-caption{margin:6px 0 12px}.mobile-contact{bottom:calc(12px + env(safe-area-inset-bottom))}.booking-sidebar[hidden]{display:none}}
+/* Revisão de legibilidade: textos funcionais com no mínimo 11px */
+.property-heading .eyebrow{font-size:11px}
+.address-link{font-size:13px}
+.photo-open span{font-size:12px}
+.photo-caption{font-size:12px;color:#4a5654}
+.period-options span{font-size:12px}
+.stay-form label span{font-size:11px}
+.stay-form>p{font-size:12px;color:#4a5654}
+.gallery-controls{font-size:12px}
+.booking-dialog-header{font-size:12px}
+.photo-caption{font-size:13px}
+.period-options span{font-size:12px}
+.gallery-controls{font-size:13px}
+/* Ajustes finais de toque e leitura no mobile */
+@media(max-width:800px){
+.stay-form input{font-size:16px}
+.stay-form>p{font-size:13px}
+.stay-form>p a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px}
+.questions details{padding:6px 0}
+.questions summary{padding:11px 0}
+.address-link,.text-action{min-height:44px;display:inline-flex;align-items:center}
+}
+.property-tabs a.is-active{box-shadow:inset 0 -2px #182124;font-weight:600}

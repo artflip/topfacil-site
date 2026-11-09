@@ -1,6 +1,7 @@
 """Check generated blog HTML and local links; no third-party dependencies."""
 import argparse
 import json
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -51,7 +52,11 @@ assert '/blog/' in (root / 'index.html').read_text(), 'Home has no blog link'
 for excluded in ('docs', 'scripts', 'Gemfile', 'Gemfile.lock', '.pages.yml', '_posts', '_config.yml'):
     assert not (root / excluded).exists(), f'Internal file exposed: {excluded}'
 example = root / 'blog/como-planejar-o-alojamento-da-sua-equipe/index.html'
-assert example.exists(), 'Published article missing'
+# The example may have been published by the editorial team. Honor its source state.
+source = Path(__file__).resolve().parents[1] / '_posts/2026-09-21-como-planejar-o-alojamento-da-sua-equipe.md'
+front_matter = source.read_text().split('---', 2)[1]
+example_published = bool(re.search(r'^published:\s*true\s*$', front_matter, re.MULTILINE))
+assert example.exists() == (args.preview or example_published), 'Article visibility does not match source publication state'
 for file in (root / 'blog').rglob('*.html'):
     content = file.read_text()
     parsed = Page()

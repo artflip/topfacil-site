@@ -9,4 +9,5 @@ permalink: /sitemap.xml
   {% for post in site.posts %}{% unless post.published == false %}
   <url><loc>{{ post.url | absolute_url | xml_escape }}</loc></url>
   {% endunless %}{% endfor %}
+  <url><loc>{{ "/empresas/" | absolute_url }}</loc></url>
 </urlset>
